@@ -10,7 +10,7 @@ export default function Navbar() {
     const buttons = (
         <>
             <a href="#about">
-                <button className={buttonClasses}>Home</button>
+                <button className={buttonClasses}>About</button>
             </a>
             <a href="#projects">
                 <button className={buttonClasses}>Projects</button>
@@ -24,7 +24,7 @@ export default function Navbar() {
         </>
     )
     return (
-        <nav className='bg-neutral-700 text-neutral-200 fixed w-full'>
+        <nav className='fixed w-full shadow-sm shadow-neutral-900 bg-neutral-800 text-neutral-200'>
             <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
                 <div className='flex items-center justify-between h-16'>
                     <div className='flex flex-row w-full justify-between'>
