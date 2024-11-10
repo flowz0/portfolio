@@ -41,7 +41,7 @@ export default function Navbar() {
                     </div>
                     <div className='md:hidden'>
                         <button onClick={() => { setIsOpen(!isOpen) }} type='button' className="fill-neutral-200">
-                            <svg viewBox="0 0 100 50" width="28" height="28">
+                            <svg className="transition-transform duration-300" viewBox="0 0 100 50" width="28" height="28">
                                 <rect width="100" height="10"></rect>
                                 <rect y="30" width="100" height="10"></rect>
                                 <rect y="60" width="100" height="10"></rect>
