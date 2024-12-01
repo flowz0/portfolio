@@ -22,7 +22,6 @@ export default function RootLayout({
         <NextUIProvider>
           <Navigation />
           {children}
-          <Footer />
         </NextUIProvider>
       </body>
     </html>

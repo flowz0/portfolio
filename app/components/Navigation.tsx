@@ -10,18 +10,29 @@ import {
     NavbarMenuItem,
 } from "@nextui-org/navbar";
 import { Button } from "@nextui-org/button";
-import { Link } from "@nextui-org/link";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import { useState } from "react";
+
+const navLinks = [
+    { name: "Projects", href: "/projects" },
+    { name: "Contact", href: "/contact" },
+];
 
 export default function Navigation() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    const pathname = usePathname();
+
     return (
-        <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-neutral-950">
+        <Navbar
+            onMenuOpenChange={setIsMenuOpen}
+            className="fixed z-50 bg-neutral-950"
+        >
             <NavbarContent>
                 <NavbarBrand>
-                    <p className="font-bold text-inherit">{'<Billy />'}</p>
+                    <Link href={'/'} className="font-bold text-inherit">{'<Billy />'}</Link>
                 </NavbarBrand>
                 <NavbarMenuToggle
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -30,38 +41,36 @@ export default function Navigation() {
             </NavbarContent>
 
             <NavbarContent className="hidden sm:flex gap-4" justify="end">
-                <NavbarItem isActive>
-                    <Link color="foreground" href="#">
-                        About
-                    </Link>
-                </NavbarItem>
-                <NavbarItem>
-                    <Link href="#" aria-current="page">
-                        Projects
-                    </Link>
-                </NavbarItem>
-                <NavbarItem>
-                    <Link href="#" aria-current="page">
-                        Contact
-                    </Link>
-                </NavbarItem>
+                {navLinks.map((link, index) => {
+                    const isNavLinkActive = pathname.startsWith(link.href);
+
+                    return (
+                        <NavbarItem key={index}>
+                            <Link
+                                href={link.href}
+                                className={isNavLinkActive ? "text-neutral-100 font-bold" : "text-neutral-400"}
+                            >
+                                {link.name}
+                            </Link>
+                        </NavbarItem>
+                    )
+                })}
             </NavbarContent>
             <NavbarMenu className="bg-neutral-950">
-                <NavbarMenuItem>
-                    <Link href="#" aria-current="page" className="text-neutral-100">
-                        About
-                    </Link>
-                </NavbarMenuItem>
-                <NavbarMenuItem>
-                    <Link href="#" aria-current="page" className="text-neutral-100">
-                        Projects
-                    </Link>
-                </NavbarMenuItem>
-                <NavbarMenuItem>
-                    <Button as={Link} href="#" color="default" variant="bordered" className="mt-2" fullWidth>
-                        Contact
-                    </Button>
-                </NavbarMenuItem>
+                {navLinks.map((link, index) => {
+                    const isNavLinkActive = pathname.startsWith(link.href);
+
+                    return (
+                        <NavbarItem key={index}>
+                            <Link
+                                href={link.href}
+                                className={isNavLinkActive ? "text-neutral-100 font-bold" : "text-neutral-400"}
+                            >
+                                {link.name}
+                            </Link>
+                        </NavbarItem>
+                    )
+                })}
             </NavbarMenu>
         </Navbar>
     );

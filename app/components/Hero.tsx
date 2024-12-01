@@ -1,9 +1,9 @@
-import { Link } from "@nextui-org/link";
+import Link from "next/link";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 export default function Hero() {
     return (
-        <main className="flex flex-col items-center py-28 px-4">
+        <main id="about" className="flex flex-col items-center mx-4 pt-16 pb-24 sm:py-32">
             <h1 className="text-5xl/none font-semibold">
                 Billy Flowers
             </h1>
@@ -12,12 +12,12 @@ export default function Hero() {
             </p>
             <ul className="flex gap-x-6 mt-8">
                 <li>
-                    <Link href="#" target="_blank" className="text-xl text-neutral-400">
+                    <Link href="https://www.linkedin.com/in/billyflowers/" target="_blank" className="text-xl text-neutral-400 hover:text-orange-500">
                         <FaLinkedinIn />
                     </Link>
                 </li>
                 <li>
-                    <Link href="#" target="_blank" className="text-xl text-neutral-400">
+                    <Link href="https://github.com/flowz0" target="_blank" className="text-xl text-neutral-400 hover:text-orange-500">
                         <FaGithub />
                     </Link>
                 </li>
