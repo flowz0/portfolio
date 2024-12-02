@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
-import { Link } from "@nextui-org/link";
 import TestImage from '@/assets/test.png'
+import Link from "next/link";
 
 interface ProjectProps {
     img?: string | StaticImageData;
