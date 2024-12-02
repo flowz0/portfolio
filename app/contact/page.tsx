@@ -9,7 +9,7 @@ export default function page() {
                 <h3 className="text-4xl/none font-semibold mt-3.5 sm:text-5xl">Let's Work</h3>
             </div>
             <Divider isFlipped className="w-full" />
-            <form className="px-4 mt-8 w-full flex flex-col max-w-xl">
+            <form className="px-4 mt-8 mb-4 w-full flex flex-col max-w-xl">
                 <div className="sm:grid sm:grid-cols-2 sm:gap-x-6">
                     <div className="flex flex-col">
                         <label htmlFor="name" className="text-neutral-300">Name</label>
@@ -30,7 +30,8 @@ export default function page() {
 
                 <button type="button" className="flex self-end mt-4 py-2 px-4 rounded bg-neutral-800 hover:bg-neutral-700">Message</button>
             </form>
-            <Footer isPrimary />
+            <Divider className="w-full" />
+            <Footer  />
         </div>
 
     )

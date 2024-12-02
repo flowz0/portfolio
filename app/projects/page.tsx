@@ -11,8 +11,7 @@ export default function page() {
       </div>
       <Divider isFlipped className="w-full" />
       <div className='flex flex-col items-center justify-center w-full bg-neutral-900'>
-        <div className="gap-4 pt-8 flex flex-wrap justify-center max-w-7xl mb-4">
-
+        <div className="gap-4 pt-8 mb-4 flex flex-wrap justify-center max-w-7xl">
           <Project
             // img={}
             title="Project Title"
@@ -76,11 +75,10 @@ export default function page() {
             site="https://bflows.dev"
             code="https://github.com/bflows/portfolio"
           />
-
-
         </div>
-        <Footer isPrimary />
       </div>
+      <Divider className="w-full" />
+      <Footer />
     </div>
   )
 }
