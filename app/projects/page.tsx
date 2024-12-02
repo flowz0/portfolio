@@ -68,13 +68,6 @@ export default function page() {
             site="https://bflows.dev"
             code="https://github.com/bflows/portfolio"
           />
-          <Project
-            // img={}
-            title="Project Title"
-            desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate explicabo nostrum error consectetur..."
-            site="https://bflows.dev"
-            code="https://github.com/bflows/portfolio"
-          />
         </div>
       </div>
       <Divider className="w-full" />
