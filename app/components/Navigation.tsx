@@ -9,7 +9,6 @@ import {
     NavbarMenu,
     NavbarMenuItem,
 } from "@nextui-org/navbar";
-import { Button } from "@nextui-org/button";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
