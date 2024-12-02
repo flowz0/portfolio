@@ -11,7 +11,7 @@ export default function page() {
       </div>
       <Divider isFlipped className="w-full" />
       <div className='flex flex-col items-center justify-center w-full bg-neutral-900'>
-        <div className="gap-4 pt-8 mb-4 flex flex-wrap justify-center max-w-7xl">
+        <div className="mx-4 pt-8 mb-4 flex flex-wrap justify-center gap-4 max-w-7xl">
           <Project
             // img={}
             title="Project Title"

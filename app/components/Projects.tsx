@@ -6,7 +6,7 @@ export default function Projects() {
         <div id="projects" className='flex flex-col items-center pt-14 pb-20 sm:py-28 bg-neutral-900'>
             <h2 className="text-sm/none font-light text-orange-500">Projects</h2>
             <h3 className="text-4xl/none font-semibold mt-3.5">My Work</h3>
-            <div className="flex flex-wrap justify-center gap-4 mt-8 mx-4">
+            <div className="mt-8 mx-4 flex flex-wrap justify-center gap-4">
 
                 <Project
                     // img={}
