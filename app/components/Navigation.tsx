@@ -28,6 +28,7 @@ export default function Navigation() {
     return (
         <Navbar
             onMenuOpenChange={setIsMenuOpen}
+            shouldHideOnScroll
             className="fixed z-50 bg-neutral-950"
         >
             <NavbarContent>
@@ -61,14 +62,14 @@ export default function Navigation() {
                     const isNavLinkActive = pathname.startsWith(link.href);
 
                     return (
-                        <NavbarItem key={index}>
+                        <NavbarMenuItem key={index}>
                             <Link
                                 href={link.href}
                                 className={isNavLinkActive ? "text-neutral-100 font-bold" : "text-neutral-400"}
                             >
                                 {link.name}
                             </Link>
-                        </NavbarItem>
+                        </NavbarMenuItem>
                     )
                 })}
             </NavbarMenu>
