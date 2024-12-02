@@ -8,9 +8,9 @@ export default function Hero() {
                 Billy Flowers
             </h1>
             <p className="text-lg/none font-light tracking-wide mt-4 text-orange-500">
-                Software Developer
+                Software Engineer
             </p>
-            <ul className="flex gap-x-6 mt-8">
+            <ul className="flex gap-x-6 mt-6">
                 <li>
                     <Link href="https://www.linkedin.com/in/billyflowers/" target="_blank" className="text-xl text-neutral-400 hover:text-orange-500">
                         <FaLinkedinIn />

@@ -1,15 +1,17 @@
 import Project from "../components/Project";
-import GoHome from "../components/GoHome";
 import Footer from "../components/Footer";
+import Divider from "../components/Divider";
 
 export default function page() {
   return (
-    <div className="flex flex-col items-center justify-center">
-      <div id="projects" className='mx-4 max-w-7xl flex flex-col items-center justify-center pt-14 pb-20 sm:py-28'>
-        <GoHome />
+    <div className="pt-14 flex flex-col items-center justify-center bg-neutral-950">
+      <div className="mx-4 my-4 flex flex-col items-center justify-center w-full">
         <h2 className="text-sm/none font-light mt-6 text-orange-500">Projects</h2>
-        <h3 className="text-4xl/none font-semibold mt-3.5">My Work</h3>
-        <div className="flex flex-wrap justify-center gap-4 mt-8">
+        <h3 className="text-4xl/none font-semibold mt-3.5 sm:text-5xl">My Work</h3>
+      </div>
+      <Divider isFlipped className="w-full" />
+      <div className='flex flex-col items-center justify-center w-full bg-neutral-900'>
+        <div className="gap-4 pt-8 flex flex-wrap justify-center max-w-7xl mb-4">
 
           <Project
             // img={}
@@ -77,7 +79,7 @@ export default function page() {
 
 
         </div>
-      <Footer />
+        <Footer isPrimary />
       </div>
     </div>
   )
