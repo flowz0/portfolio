@@ -3,7 +3,7 @@ import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 export default function Hero() {
     return (
-        <main id="about" className="flex flex-col items-center mx-4 pt-16 pb-24 sm:py-32">
+        <main id="about" className="flex flex-col items-center mx-4 py-24 sm:py-32">
             <h1 className="text-5xl/none font-semibold">
                 Billy Flowers
             </h1>
