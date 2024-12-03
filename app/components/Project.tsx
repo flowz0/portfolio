@@ -18,7 +18,7 @@ export default function Project({ img = TestImage, title, desc, site, code }: Pr
                 src={img}
                 alt={`${title} project image`}
                 quality={90}
-                className='object-cover h-48 w-full rounded-t-lg'
+                className='object-cover h-56 w-full rounded-t-lg'
             />
             <div className='px-4 py-3.5 flex flex-col justify-between h-fit sm:px-4 sm:py-4'>
                 <div>
