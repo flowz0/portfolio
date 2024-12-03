@@ -27,7 +27,6 @@ export default function Navigation() {
     return (
         <Navbar
             onMenuOpenChange={setIsMenuOpen}
-            shouldHideOnScroll
             className="fixed z-50 bg-neutral-950"
         >
             <NavbarContent>
