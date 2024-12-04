@@ -31,7 +31,7 @@ export default function Navigation() {
         >
             <NavbarContent>
                 <NavbarBrand>
-                    <Link href={'/'} className="font-bold text-inherit">{'<Billy />'}</Link>
+                    <Link href={'/'} className="font-bold text-xl">{'<Billy />'}</Link>
                 </NavbarBrand>
                 <NavbarMenuToggle
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -47,7 +47,7 @@ export default function Navigation() {
                         <NavbarItem key={index}>
                             <Link
                                 href={link.href}
-                                className={isNavLinkActive ? "text-neutral-100 font-bold" : "text-neutral-400"}
+                                className={isNavLinkActive ? "pb-5 font-bold text-lg border-b-2 text-orange-500 border-orange-500" : "text-lg text-neutral-400 hover:text-orange-500"}
                             >
                                 {link.name}
                             </Link>
