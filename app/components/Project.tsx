@@ -2,6 +2,7 @@ import Image, { StaticImageData } from "next/image";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import TestImage from '@/assets/test.png'
 import Link from "next/link";
+import Button from "./Button";
 
 interface ProjectProps {
     img?: string | StaticImageData;
@@ -25,8 +26,8 @@ export default function Project({ img = TestImage, title, desc, site, code }: Pr
                     <h4 className='text-2xl/none font-semibold tracking-wide'>{title}</h4>
                     <p className='mt-3 leading-6 tracking-wider text-neutral-300'>{desc}</p>
                 </div>
-                <div className="flex justify-between items-center mt-6">
-                    <button type="button" className="flex self-end py-2 px-5 rounded bg-neutral-600 hover:bg-neutral-700">Show Details</button>
+                <div className="flex justify-between items-baseline">
+                    <Button className="mt-6" text="Show Details" />
                     <div className="flex gap-x-3">
                         {site && (
                             <Link href={site} target="_blank" className="text-xl/none text-neutral-400 hover:text-orange-500">
