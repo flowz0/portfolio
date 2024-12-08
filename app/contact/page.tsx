@@ -5,27 +5,22 @@ import Footer from '../components/Footer'
 
 export default function page() {
     return (
-        <div>
-
-
-            <div className="pt-16 flex flex-col items-center justify-center bg-neutral-950">
-                <div className="mx-4 py-4 w-full flex flex-col items-center">
-                    <h2 className="text-sm/none font-light mt-6 text-orange-500">Contact</h2>
-                    <h3 className="text-4xl/none font-semibold mt-3.5 sm:text-5xl">Let's Work</h3>
+        <>
+            <div className="pt-16 pb-6 px-6 flex flex-col items-center bg-neutral-950">
+                <h2 className="text-base/none font-light text-orange-500 sm:text-sm/none">Contact</h2>
+                <h3 className="mt-4 text-4xl/none text-neutral-200 font-semibold sm:text-5xl/none">Let's Work</h3>
+            </div>
+            <Divider className="w-full" flipped />
+            <div className="px-6 py-4 flex flex-col bg-neutral-900 sm:flex-row sm:justify-center sm:gap-x-6 sm:py-20">
+                <div className='pl-2 sm:pl-0'>
+                    <ContactSocials className="sm:flex-col sm:gap-y-2.5 sm:mt-6" />
                 </div>
-                <Divider className="w-full" flipped />
-                <div className="pt-6 w-full flex flex-col sm:flex-row sm:gap-x-6 items-center justify-center bg-neutral-900">
-                    <div className=''>
-                        <ContactForm />
-                    </div>
-                    <div className='self-baseline sm:pt-8'>
-                        <ContactSocials className='mt-4' vertical />
-                    </div>
+                <div className='w-full max-w-xl'>
+                    <ContactForm />
                 </div>
             </div>
             <Divider className="w-full" />
             <Footer />
-
-        </div>
+        </>
     )
 }
