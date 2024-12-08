@@ -7,7 +7,7 @@ interface SkillProps {
 
 const Skill: React.FC<SkillProps> = ({icon: Icon, name}) => {
     return (
-        <div className="py-3 px-5 rounded-lg flex items-center gap-x-4 bg-neutral-800">
+        <div className="py-3 px-4 rounded-lg flex items-center gap-x-2.5 bg-neutral-800">
             <Icon size={20} />
             <p>{name}</p>
         </div>
