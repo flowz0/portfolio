@@ -55,7 +55,7 @@ export default function Navigation() {
                     )
                 })}
             </NavbarContent>
-            <NavbarMenu className="bg-neutral-950">
+            <NavbarMenu className="m-0 p-0 bg-neutral-950">
                 {navLinks.map((link, index) => {
                     const isNavLinkActive = pathname.startsWith(link.href);
 
@@ -63,7 +63,7 @@ export default function Navigation() {
                         <NavbarMenuItem key={index}>
                             <Link
                                 href={link.href}
-                                className={isNavLinkActive ? "text-neutral-100 font-bold" : "text-neutral-400"}
+                                className={isNavLinkActive ? "pl-6 font-bold text-lg border-l-2 text-orange-500 border-orange-500" : "pl-6 text-lg text-neutral-400"}
                             >
                                 {link.name}
                             </Link>
