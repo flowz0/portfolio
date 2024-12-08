@@ -4,14 +4,14 @@ import Divider from "../components/Divider";
 
 export default function page() {
   return (
-    <div className="pt-16 flex flex-col items-center justify-center bg-neutral-950">
-      <div className="mx-4 my-4 flex flex-col items-center justify-center w-full">
-        <h2 className="text-sm/none font-light mt-6 text-orange-500">Projects</h2>
-        <h3 className="text-4xl/none font-semibold mt-3.5 sm:text-5xl">My Work</h3>
+    <>
+      <div className="pt-16 pb-6 flex flex-col items-center bg-neutral-950">
+        <h2 className="text-base/none font-light text-orange-500 sm:text-sm/none">Projects</h2>
+        <h3 className="mt-4 text-4xl/none text-neutral-200 font-semibold sm:text-5xl/none">My Work</h3>
       </div>
       <Divider className="w-full" flipped />
-      <div className='flex flex-col items-center justify-center w-full bg-neutral-900'>
-        <div className="mx-4 py-16 flex flex-wrap justify-center gap-4 max-w-7xl">
+      <div className='px-6 py-16 flex flex-col items-center bg-neutral-900'>
+        <div className="flex flex-wrap justify-center gap-6 sm:gap-4 sm:max-w-7xl">
           <Project
             // img={}
             title="Project Title"
@@ -51,6 +51,7 @@ export default function page() {
       </div>
       <Divider className="w-full" />
       <Footer />
-    </div>
+
+    </>
   )
 }
