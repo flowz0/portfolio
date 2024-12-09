@@ -1,5 +1,6 @@
 import Button from "./Button";
 import ContactSocials from "./ContactSocials";
+import RoleTypeWriter from "./RoleTypeWriter";
 
 export default function Hero() {
     return (
@@ -8,7 +9,7 @@ export default function Hero() {
                 Billy Flowers
             </h1>
             <p className="mt-4 text-base/none font-normal tracking-wide text-orange-500 sm:text-lg/none">
-                Software Engineer
+                I'm a <RoleTypeWriter />
             </p>
             <ContactSocials className="mt-6" />
             <Button className="mt-4" text="Download CV" />
