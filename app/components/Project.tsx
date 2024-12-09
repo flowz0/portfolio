@@ -14,19 +14,19 @@ interface ProjectProps {
 
 export default function Project({ img = TestImage, title, desc, site, code }: ProjectProps) {
     return (
-        <div className='rounded-lg h-full max-w-xs bg-neutral-900 sm:max-w-sm sm:bg-neutral-800'>
+        <div className='rounded-lg h-full max-w-sm bg-neutral-900 md:bg-neutral-800'>
             <Image
                 src={img}
                 alt={`${title} project image`}
                 quality={90}
-                className='object-cover h-56 w-full rounded-lg sm:h-56 sm:rounded-t-lg sm:rounded-b-none'
+                className='object-cover h-48 w-full rounded-lg sm:h-56 sm:rounded-t-lg sm:rounded-b-none'
             />
-            <div className='mt-2 flex flex-col justify-between h-fit sm:mt-0 sm:p-5'>
+            <div className='mt-2 flex flex-col justify-between h-full md:mt-0 md:p-5'>
                 <div>
                     <h4 className='text-3xl/8 tracking-normal text-neutral-200'>{title}</h4>
                     <p className='mt-2 text-base/6 tracking-wide text-neutral-400'>{desc}</p>
                 </div>
-                <div className="flex justify-between items-baseline">
+                <div className="flex justify-between items-center">
                     <Button className="mt-4" text="Show Details" />
                     <div className="flex gap-x-2">
                         {site && (
