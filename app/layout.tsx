@@ -17,11 +17,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased`}
+        className="antialiased bg-neutral-950 text-neutral-300"
       >
         <NextUIProvider>
           <Navigation />
           {children}
+          <Footer />
         </NextUIProvider>
       </body>
     </html>
