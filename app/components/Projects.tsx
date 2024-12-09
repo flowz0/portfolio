@@ -5,9 +5,9 @@ import ProjectDDDC from "@/assets/project-dddc.png";
 
 export default function Projects() {
     return (
-        <div id="projects" className='px-6 py-16 flex flex-col items-center bg-neutral-900'>
+        <div id="projects" className='px-4 py-16 rounded-lg flex flex-col items-center bg-neutral-900'>
             <h2 className="text-base/none font-light text-orange-500 sm:text-sm/none">Projects</h2>
-            <h3 className="mt-4 text-4xl/none font-semibold text-neutral-200 sm:text-5xl/none">My Work</h3>
+            <h3 className="mt-4 text-4xl/none font-semibold text-neutral-300 sm:text-5xl/none">My Work</h3>
             <div className="mt-6 flex flex-wrap justify-center gap-y-6 gap-x-4 sm:mx-4">
 
                 <Project
