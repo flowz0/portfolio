@@ -27,7 +27,7 @@ export default function Navigation() {
     return (
         <Navbar
             onMenuOpenChange={setIsMenuOpen}
-            className="fixed z-50 bg-neutral-950"
+            className={isMenuOpen ? "fixed z-50 text-neutral-300 bg-neutral-900" : "fixed z-50 rounded-b-lg shadow-md text-neutral-300 bg-neutral-900"}
         >
             <NavbarContent>
                 <NavbarBrand>
@@ -47,7 +47,7 @@ export default function Navigation() {
                         <NavbarItem key={index}>
                             <Link
                                 href={link.href}
-                                className={isNavLinkActive ? "pb-5 font-bold text-lg border-b-2 text-orange-500 border-orange-500" : "text-lg text-neutral-400 hover:text-orange-500"}
+                                className={isNavLinkActive ? "pb-[1.13rem] font-bold text-lg border-b-2 text-orange-500 border-orange-500" : "text-lg text-neutral-400 hover:text-orange-500"}
                             >
                                 {link.name}
                             </Link>
@@ -55,7 +55,7 @@ export default function Navigation() {
                     )
                 })}
             </NavbarContent>
-            <NavbarMenu className="m-0 p-0 bg-neutral-950">
+            <NavbarMenu className="m-0 p-0 bg-neutral-900">
                 {navLinks.map((link, index) => {
                     const isNavLinkActive = pathname.startsWith(link.href);
 
@@ -63,7 +63,7 @@ export default function Navigation() {
                         <NavbarMenuItem key={index}>
                             <Link
                                 href={link.href}
-                                className={isNavLinkActive ? "pl-6 font-bold text-lg border-l-2 text-orange-500 border-orange-500" : "pl-6 text-lg text-neutral-400"}
+                                className={isNavLinkActive ? "pl-6 text-lg border-l-1 text-orange-500 border-orange-500" : "pl-6 text-lg text-neutral-400"}
                             >
                                 {link.name}
                             </Link>
