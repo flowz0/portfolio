@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from "next/image";
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub, FaCalendarAlt } from "react-icons/fa";
 import TestImage from '@/assets/test.png'
 import Link from "next/link";
 import Button from "./Button";
@@ -8,11 +8,23 @@ interface ProjectProps {
     img?: string | StaticImageData;
     title: string;
     desc: string;
+    date: string;
     site?: string;
     code?: string;
+    showFullDescription?: boolean;
 }
 
-export default function Project({ img = TestImage, title, desc, site, code }: ProjectProps) {
+export default function Project({ img = TestImage, title, desc, date, site, code, showFullDescription = false }: ProjectProps) {
+    // Function to form date
+    const formatDate = (dateString: string) => {
+        const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+        return new Date(dateString).toLocaleDateString(undefined, options);
+    };
+
+    const projectId = title.toLowerCase().replace(/\s+/g, '-');
+
+    const defaultProjectDesc = "mt-2 text-base/6 tracking-wider text-neutral-400";
+
     return (
         <div className='rounded-lg h-full max-w-sm bg-neutral-900 md:bg-neutral-800'>
             <Image
@@ -21,13 +33,23 @@ export default function Project({ img = TestImage, title, desc, site, code }: Pr
                 quality={90}
                 className='object-cover h-48 w-full rounded-lg sm:h-56 sm:rounded-t-lg sm:rounded-b-none'
             />
-            <div className='mt-2 flex flex-col justify-between h-full md:mt-0 md:p-5'>
+            <div className='mt-2 flex flex-col justify-between h-full md:mt-0 md:py-3.5 md:px-3'>
                 <div>
-                    <h4 className='text-3xl/8 tracking-normal text-neutral-200'>{title}</h4>
-                    <p className='mt-2 text-base/6 tracking-wide text-neutral-400'>{desc}</p>
+                    <h4 className='text-2xl/none text-neutral-300'>{title}</h4>
+                    {showFullDescription ? (
+                        <p className={`${defaultProjectDesc}`}>{desc}</p>
+                    ) : (
+                        <p className={`line-clamp-3 ${defaultProjectDesc}`}>{desc}</p>
+                    )}
+                    <p className="mt-5 flex items-center text-sm/none tracking-wide text-neutral-400">
+                        <FaCalendarAlt className="mr-2" />
+                        {formatDate(date)}
+                    </p>
                 </div>
                 <div className="flex justify-between items-center">
-                    <Button className="mt-4" text="Show Details" />
+                    <Link href={`/projects/${projectId}`}>
+                        <Button className="mt-4" text="Show details" />
+                    </Link>
                     <div className="flex gap-x-2">
                         {site && (
                             <Link href={site} target="_blank" className="text-xl/none text-neutral-400 hover:text-orange-500">
