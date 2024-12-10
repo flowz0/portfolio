@@ -8,10 +8,10 @@ export default function Hero() {
             <h1 className="text-4xl/none text-neutral-300 font-semibold sm:text-6xl/none">
                 Billy Flowers
             </h1>
-            <p className="mt-4 text-base/none font-normal tracking-wide text-orange-500 sm:text-lg/none">
+            <p className="mt-5 text-base/none font-light tracking-wide text-orange-500 sm:text-lg/none">
                 I'm a <RoleTypeWriter />
             </p>
-            <ContactSocials className="mt-6" />
+            <ContactSocials className="mt-5" />
             <Button className="mt-4" text="Download CV" />
         </main>
     );
