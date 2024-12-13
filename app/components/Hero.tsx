@@ -9,7 +9,7 @@ export default function Hero() {
                 Billy Flowers
             </h1>
             <p className="mt-5 text-base/none font-light tracking-wide text-orange-500 sm:text-lg/none">
-                I'm a <RoleTypeWriter />
+                I&apos;m a <RoleTypeWriter />
             </p>
             <ContactSocials className="mt-5" />
             <Button className="mt-4" text="Download CV" />
