@@ -2,7 +2,6 @@ import Image, { StaticImageData } from "next/image";
 import { FaExternalLinkAlt, FaGithub, FaCalendarAlt } from "react-icons/fa";
 import TestImage from '@/assets/test.png'
 import Link from "next/link";
-import Button from "./Button";
 
 interface ProjectProps {
     img?: string | StaticImageData;
@@ -21,7 +20,7 @@ export default function Project({ img = TestImage, title, desc, date, site, code
         return new Date(dateString).toLocaleDateString(undefined, options);
     };
 
-    const projectId = title.toLowerCase().replace(/\s+/g, '-');
+    // const projectId = title.toLowerCase().replace(/\s+/g, '-');
 
     const defaultProjectDesc = "mt-2 text-base/6 tracking-wider text-neutral-400";
 
@@ -47,8 +46,10 @@ export default function Project({ img = TestImage, title, desc, date, site, code
                     </p>
                 </div>
                 <div className="flex justify-between items-center">
-                    <Link href={`/projects/${projectId}`}>
-                        <Button className="mt-4" text="Show details" />
+                    <Link href="/projects">
+                        <button type="button" className="mt-4 bg-neutral-600 text-neutral-300 hover:bg-neutral-700">
+                            Show details
+                        </button>
                     </Link>
                     <div className="flex gap-x-2">
                         {site && (
