@@ -1,30 +1,76 @@
+"use client";
+
+import { sendContactEmailAction } from "../actions";
+import { useRef, useTransition } from "react";
+import toast from "react-hot-toast";
 import Button from "./Button";
 
-export default function ContactForm() {
-    return (
-        <form className="w-full flex flex-col gap-y-2.5">
-            <div className="flex flex-col gap-y-2.5 sm:grid sm:grid-cols-2 sm:gap-x-3.5">
-                <div className="flex flex-col">
-                    <label htmlFor="name" className="pl-2.5 text-neutral-400">Name</label>
-                    <input id="name" type="text" className="mt-1.5 py-2 px-2.5 rounded-lg bg-neutral-800 text-neutral-400 placeholder:text-neutral-600 focus:outline-none focus:ring-1 focus:ring-orange-500" placeholder="Enter name" />
-                </div>
+function ContactForm() {
+  const formRef = useRef<HTMLFormElement>(null);
 
-                <div className="flex flex-col">
-                    <label htmlFor="phone" className="sm:mt-0 pl-2.5 text-neutral-400">Phone</label>
-                    <input id="phone" type="text" className="mt-1.5 py-2 px-2.5 rounded-lg bg-neutral-800 text-neutral-400 placeholder:text-neutral-600 focus:outline-none focus:ring-1 focus:ring-orange-500" placeholder="Enter phone" />
-                </div>
+  const [isPending, startTransition] = useTransition();
 
-            </div>
-            <div className="flex flex-col">
-                <label htmlFor="email" className="pl-2.5 text-neutral-400">Email</label>
-                <input id="email" type="email" className="mt-1.5 py-2 px-2.5 rounded-lg bg-neutral-800 text-neutral-400 placeholder:text-neutral-600 focus:outline-none focus:ring-1 focus:ring-orange-500" placeholder="Enter email" />
-            </div>
-            <div className="flex flex-col">
-                <label htmlFor="message" className="pl-2.5 text-neutral-400">Message</label>
-                <textarea id="message" rows={4} className="mt-1.5 py-2 px-2.5 rounded-lg resize-none bg-neutral-800 text-neutral-400 placeholder:text-neutral-600 focus:outline-none focus:ring-1 focus:ring-orange-500" placeholder="Enter message" />
-            </div>
+  const handleSubmitContactForm = (formData: FormData) => {
+    startTransition(async () => {
+      const { errorMessage } = await sendContactEmailAction(formData);
+      if (!errorMessage) {
+        toast.success("Message sent!");
+        formRef.current?.reset();
+      } else {
+        toast.error(errorMessage);
+      }
+    });
+  };
 
-            <Button className="self-end" text="Message" submit />
-        </form>
-    );
+  return (
+    <form
+      ref={formRef}
+      action={handleSubmitContactForm}
+      className="w-full flex flex-col gap-y-2.5"
+    >
+      <div className="flex flex-col">
+        <label htmlFor="name" className="pl-2.5 text-neutral-400">
+          Name
+        </label>
+        <input
+          name="name"
+          id="name"
+          type="text"
+          disabled={isPending}
+          className="mt-1.5 py-2 px-2.5 rounded-lg bg-neutral-800 text-neutral-400 placeholder:text-neutral-600 focus:outline-none focus:ring-1 focus:ring-orange-500"
+          placeholder="Enter name"
+        />
+      </div>
+      <div className="flex flex-col">
+        <label htmlFor="email" className="pl-2.5 text-neutral-400">
+          Email
+        </label>
+        <input
+          name="email"
+          id="email"
+          type="email"
+          disabled={isPending}
+          className="mt-1.5 py-2 px-2.5 rounded-lg bg-neutral-800 text-neutral-400 placeholder:text-neutral-600 focus:outline-none focus:ring-1 focus:ring-orange-500"
+          placeholder="Enter email"
+        />
+      </div>
+      <div className="flex flex-col">
+        <label htmlFor="message" className="pl-2.5 text-neutral-400">
+          Message
+        </label>
+        <textarea
+          name="message"
+          id="message"
+          rows={4}
+          disabled={isPending}
+          className="mt-1.5 py-2 px-2.5 rounded-lg resize-none bg-neutral-800 text-neutral-400 placeholder:text-neutral-600 focus:outline-none focus:ring-1 focus:ring-orange-500"
+          placeholder="Enter message"
+        />
+      </div>
+
+      <Button className="self-end" text="Message" submit />
+    </form>
+  );
 }
+
+export default ContactForm;
