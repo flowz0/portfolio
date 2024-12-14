@@ -28,8 +28,7 @@ const projectsData: ProjectData[] = [
     img: NodeJSBlog,
     title: "Blog Site",
     desc: "A simple blog site to view all blogs and an admin page to create posts. Built with Node.js, Express.js, EJS, and Mongoose.",
-    site: "https://www.ductdaddykc.com/",
-    code: "https://github.com/flowz0/dddc",
+    code: "https://github.com/flowz0/nodejs-blog",
     date: "2024-11-15"
   },
   {
@@ -37,9 +36,7 @@ const projectsData: ProjectData[] = [
     img: TestImage,
     title: "Another Really Cool Project",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate explicabo nostrum elit... Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate explicabo nostrum elit...",
-    site: "https://www.ductdaddykc.com/",
-    code: "https://github.com/flowz0/dddc",
-    date: "2024-12-22"
+    date: "2023-12-22"
   },
 ];
 
