@@ -47,7 +47,7 @@ export default function Project({ img = TestImage, title, desc, date, site, code
                 </div>
                 <div className="flex justify-between items-center">
                     <Link href="/projects">
-                        <button type="button" className="mt-4 bg-neutral-600 text-neutral-300 hover:bg-neutral-700">
+                        <button type="button" className="mt-4 flex py-2 px-3.5 rounded-lg bg-neutral-600 text-neutral-300 hover:bg-neutral-700">
                             Show details
                         </button>
                     </Link>
