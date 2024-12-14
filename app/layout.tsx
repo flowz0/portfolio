@@ -3,6 +3,7 @@ import "./globals.css";
 import { NextUIProvider } from "@nextui-org/system";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: "Billy's Portfolio",
@@ -16,14 +17,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className="antialiased bg-neutral-950 text-neutral-300"
-      >
+      <body className="antialiased bg-neutral-950 text-neutral-300">
         <NextUIProvider>
           <Navigation />
           {children}
           <Footer />
         </NextUIProvider>
+        <Toaster 
+          position="bottom-center" 
+          reverseOrder={false}
+        />
       </body>
     </html>
   );
