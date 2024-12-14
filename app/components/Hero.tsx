@@ -1,4 +1,3 @@
-import Button from "./Button";
 import ContactSocials from "./ContactSocials";
 import RoleTypeWriter from "./RoleTypeWriter";
 
