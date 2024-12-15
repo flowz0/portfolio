@@ -7,7 +7,7 @@ export default function Contact() {
                 <h2 className="text-base/none font-light text-orange-500 sm:text-sm/none">Contact</h2>
                 <h3 className="mt-4 text-4xl/none font-semibold text-neutral-300 sm:text-5xl/none">Let&apos;s Work</h3>
             </div>
-            <div className="mt-6 w-full max-w-xl">
+            <div className="mt-8 w-full max-w-xl">
                 <ContactForm />
             </div>
         </div>

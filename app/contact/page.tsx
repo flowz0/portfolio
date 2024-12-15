@@ -12,7 +12,7 @@ export default function page() {
                 <div className="pl-2 flex sm:order-2 justify-center sm:pl-0 sm:flex-none">
                     <ContactSocials className="sm:flex-col sm:gap-y-3 sm:mt-2" />
                 </div>
-                <div className="mt-4 w-full max-w-xl sm:mt-0 sm:order-1">
+                <div className="mt-6 w-full max-w-xl sm:mt-0 sm:order-1">
                     <ContactForm />
                 </div>
             </div>
