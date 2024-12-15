@@ -22,7 +22,7 @@ export default function Project({ img = TestImage, title, desc, date, site, code
 
     // const projectId = title.toLowerCase().replace(/\s+/g, '-');
 
-    const defaultProjectDesc = "mt-2 text-base/6 tracking-wider text-neutral-400";
+    const defaultProjectDesc = "mt-1.5 text-base/7 tracking-wider text-neutral-400";
 
     return (
         <div className='rounded-lg h-full max-w-sm bg-neutral-900 md:bg-neutral-800'>
@@ -32,15 +32,15 @@ export default function Project({ img = TestImage, title, desc, date, site, code
                 quality={90}
                 className='object-cover h-48 w-full rounded-lg sm:h-56 sm:rounded-t-lg sm:rounded-b-none'
             />
-            <div className='mt-2 flex flex-col justify-between h-full md:mt-0 md:py-3.5 md:px-3'>
+            <div className='mt-2.5 flex flex-col justify-between h-full md:m-0 md:mt-2.5 md:mb-4 md:px-5'>
                 <div>
-                    <h4 className='text-2xl/none text-neutral-300'>{title}</h4>
+                    <h4 className='text-2xl/9 text-neutral-300'>{title}</h4>
                     {showFullDescription ? (
                         <p className={`${defaultProjectDesc}`}>{desc}</p>
                     ) : (
                         <p className={`line-clamp-3 ${defaultProjectDesc}`}>{desc}</p>
                     )}
-                    <p className="mt-5 flex items-center text-sm/none tracking-wide text-neutral-400">
+                    <p className="mt-3 flex items-center text-sm/none tracking-wide text-neutral-400">
                         <FaCalendarAlt className="mr-2" />
                         {formatDate(date)}
                     </p>
@@ -49,7 +49,7 @@ export default function Project({ img = TestImage, title, desc, date, site, code
                     <Link href="/projects">
                         <button 
                             type="button" 
-                            className="mt-4 flex py-2 px-3.5 rounded-lg cursor-not-allowed bg-neutral-600 text-neutral-300 hover:bg-neutral-700"
+                            className="mt-6 flex py-2 px-3.5 rounded-lg cursor-not-allowed bg-neutral-600 text-neutral-300 hover:bg-neutral-700"
                             disabled
                         >
                             Show details
