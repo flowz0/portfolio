@@ -39,6 +39,8 @@ function ContactForm() {
           disabled={isPending}
           className="mt-1.5 py-2 px-2.5 rounded-lg bg-neutral-800 text-neutral-400 placeholder:text-neutral-600 focus:outline-none focus:ring-1 focus:ring-orange-500"
           placeholder="Enter name"
+          autoComplete="given-name"
+          required
         />
       </div>
       <div className="flex flex-col">
@@ -52,6 +54,8 @@ function ContactForm() {
           disabled={isPending}
           className="mt-1.5 py-2 px-2.5 rounded-lg bg-neutral-800 text-neutral-400 placeholder:text-neutral-600 focus:outline-none focus:ring-1 focus:ring-orange-500"
           placeholder="Enter email"
+          autoComplete="email"
+          required
         />
       </div>
       <div className="flex flex-col">
@@ -65,6 +69,8 @@ function ContactForm() {
           disabled={isPending}
           className="mt-1.5 py-2 px-2.5 rounded-lg resize-none bg-neutral-800 text-neutral-400 placeholder:text-neutral-600 focus:outline-none focus:ring-1 focus:ring-orange-500"
           placeholder="Enter message"
+          autoComplete="off"
+          required
         />
       </div>
 
