@@ -14,7 +14,7 @@ export default function Projects() {
         <div id="projects" className='px-4 py-16 rounded-lg flex flex-col items-center bg-neutral-900'>
             <h2 className="text-base/none font-light text-orange-500 sm:text-sm/none">Projects</h2>
             <h3 className="mt-4 text-4xl/none font-semibold text-neutral-300 sm:text-5xl/none">My Work</h3>
-            <div className="mt-6 flex flex-wrap justify-center gap-y-8 gap-x-4 sm:mx-4">
+            <div className="mt-8 flex flex-wrap justify-center gap-y-8 gap-x-4 sm:mx-4 sm:gap-y-4">
         
                 {recentProjects.map((project, index) => (
                     <Project
