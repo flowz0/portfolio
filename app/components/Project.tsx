@@ -50,8 +50,7 @@ export default function Project({ img = TestImage, title, desc, date, site, code
                     <Link href="/projects">
                         <button 
                             type="button" 
-                            className="mt-6 flex py-2 px-3.5 rounded-lg cursor-not-allowed bg-neutral-600 text-neutral-300 hover:bg-neutral-700"
-                            disabled
+                            className="mt-6 flex py-2 px-3.5 rounded-lg bg-neutral-600 text-neutral-300 hover:bg-neutral-700"
                         >
                             Show details
                         </button>
