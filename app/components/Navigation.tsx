@@ -10,9 +10,9 @@ import {
     NavbarMenuItem,
 } from "@nextui-org/navbar";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname,useRouter } from "next/navigation";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const navLinks = [
     { name: "Projects", href: "/projects" },
@@ -21,12 +21,22 @@ const navLinks = [
 
 export default function Navigation() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
     const pathname = usePathname();
+    const router = useRouter();
+
+    useEffect(() => {
+        setIsMenuOpen(false);
+    }, [pathname]);
+
+    const handleLinkClick = (href: string) => {
+        setIsMenuOpen(false);
+        router.push(href);
+    };
 
     return (
         <Navbar
             onMenuOpenChange={setIsMenuOpen}
+            isMenuOpen={isMenuOpen}
             className={isMenuOpen ? "fixed z-50 text-neutral-300 bg-neutral-900" : "fixed z-50 rounded-b-lg shadow-md text-neutral-300 bg-neutral-900"}
         >
             <NavbarContent>
@@ -63,6 +73,7 @@ export default function Navigation() {
                         <NavbarMenuItem key={index}>
                             <Link
                                 href={link.href}
+                                onClick={() => handleLinkClick(link.href)}
                                 className={isNavLinkActive ? "pl-6 text-lg border-l-1 text-orange-500 border-orange-500" : "pl-6 text-lg text-neutral-400"}
                             >
                                 {link.name}
