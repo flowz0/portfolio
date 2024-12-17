@@ -29,7 +29,8 @@ export default function Project({ img = TestImage, title, desc, date, site, code
             <Image
                 src={img}
                 alt={`${title} project image`}
-                quality={90}
+                quality={100}
+                priority={false}
                 className='object-cover h-48 w-full rounded-lg sm:h-56 sm:rounded-t-lg sm:rounded-b-none'
             />
             <div className='mt-2.5 flex flex-col justify-between h-full md:m-0 md:mt-2.5 md:mb-4 md:px-5'>
