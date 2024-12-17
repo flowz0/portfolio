@@ -35,7 +35,21 @@ const projectsData: ProjectData[] = [
     id: 3,
     img: TestImage,
     title: "Another Really Cool Project",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate explicabo nostrum elit... Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate explicabo nostrum elit...",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ex sint ipsa repellendus expedita corrupti rerum laborum, quos vitae perspiciatis delectus impedit qui, quidem esse libero iure! Inventore, quam est!",
+    date: "2023-12-22"
+  },
+  {
+    id: 4,
+    img: TestImage,
+    title: "Another Really Cool Project",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ex sint ipsa repellendus expedita corrupti rerum laborum, quos vitae perspiciatis delectus impedit qui, quidem esse libero iure! Inventore, quam est!",
+    date: "2023-12-22"
+  },
+  {
+    id: 5,
+    img: TestImage,
+    title: "Another Really Cool Project",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ex sint ipsa repellendus expedita corrupti rerum laborum, quos vitae perspiciatis delectus impedit qui, quidem esse libero iure! Inventore, quam est!",
     date: "2023-12-22"
   },
 ];
