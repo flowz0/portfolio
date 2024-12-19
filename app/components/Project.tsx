@@ -31,7 +31,7 @@ export default function Project({ img = TestImage, title, desc, date, site, code
                 alt={`${title} project image`}
                 quality={100}
                 priority={false}
-                className='object-cover h-48 w-full rounded-lg sm:h-56 sm:rounded-t-lg sm:rounded-b-none'
+                className='object-cover h-48 w-full rounded-lg sm:h-64 sm:rounded-t-lg sm:rounded-b-none'
             />
             <div className='mt-2.5 flex flex-col justify-between h-full md:m-0 md:mt-2.5 md:mb-4 md:px-5'>
                 <div>
@@ -41,7 +41,7 @@ export default function Project({ img = TestImage, title, desc, date, site, code
                     ) : (
                         <p className={`line-clamp-3 ${defaultProjectDesc}`}>{desc}</p>
                     )}
-                    <p className="mt-3 flex items-center text-sm/none tracking-wide text-neutral-400">
+                    <p className="mt-3.5 flex items-center text-sm/none tracking-wide text-neutral-400">
                         <FaCalendarAlt className="mr-2" />
                         {formatDate(date)}
                     </p>
@@ -50,7 +50,7 @@ export default function Project({ img = TestImage, title, desc, date, site, code
                     <Link href="/projects">
                         <button 
                             type="button" 
-                            className="mt-6 flex py-2 px-3.5 rounded-lg bg-neutral-600 text-neutral-300 hover:bg-neutral-700"
+                            className="mt-7 flex py-2 px-3.5 rounded-lg bg-neutral-600 text-neutral-300 hover:bg-neutral-700"
                         >
                             Show details
                         </button>
