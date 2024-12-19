@@ -17,7 +17,7 @@ export const sendEmail = async ({
     to,
     from: {
       email: "donotreply@bflows.dev",
-      name: "bflows.dev",
+      name: "flowz0",
     },
     templateId: templates[templateName],
     dynamicTemplateData
