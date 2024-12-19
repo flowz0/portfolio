@@ -5,7 +5,7 @@ import { Typewriter } from "react-simple-typewriter";
 export default function RoleTypeWriter() {
   return (
     <Typewriter 
-      words={["Full-Stack Web Developer", "Software Engineer"]}
+      words={["Software Engineer", "Designer", "Freelancer", "Tech Enthusiast", "Full Stack Developer"]}
       loop={2}
     />
   )
