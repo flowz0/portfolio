@@ -1,16 +1,18 @@
 import Link from "next/link";
+import { noto_sans } from "../fonts";
 
-interface PrimaryProp {
-    isPrimary?: boolean;
-}
-
-export default function Footer({ isPrimary = false }: PrimaryProp) {
-    return (
-        <div className={isPrimary ? "w-full text-center bg-neutral-900" : "w-full text-center bg-neutral-950"}>
-            <p className="pt-8 pb-16 text-sm/none font-light tracking-widest text-neutral-300">
-                © 2025 {' '}
-                <Link href="https://www.bflows.dev" className="font-bold text-orange-600 hover:text-orange-700">flowz0</Link>
-            </p>
-        </div>
-    );
+export default function Footer() {
+  return (
+    <div className="mx-6 text-center">
+      <p className={`${noto_sans.className} pt-8 pb-16 text-sm/6 font-light tracking-widest text-neutral-300`}>
+        © 2024 Billy Flowers. All rights reserved. Created by{" "}
+        <Link
+          href="/"
+          className="font-medium text-orange-500 hover:text-orange-600"
+        >
+          flowz0
+        </Link>
+      </p>
+    </div>
+  );
 }

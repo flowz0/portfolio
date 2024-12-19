@@ -1,4 +1,5 @@
 import { IconType } from "react-icons";
+import { noto_sans } from "../fonts";
 
 interface SkillProps {
     icon: IconType;
@@ -7,10 +8,10 @@ interface SkillProps {
 
 const Skill: React.FC<SkillProps> = ({icon: Icon, name}) => {
     return (
-        <div className="py-3 px-4 rounded-lg flex items-center gap-x-2 bg-neutral-800 text-neutral-400 hover:outline-none hover:ring-1 hover:ring-orange-600 hover:scale-110">
+        <p className={`${noto_sans.className} py-3 px-4 rounded-lg flex items-center gap-x-2 bg-neutral-900 text-neutral-400 hover:-translate-y-1`}>
             <Icon size={20} />
-            <p>{name}</p>
-        </div>
+            <span className="cursor-default">{name}</span>
+        </p>
     );
 };
 

@@ -4,6 +4,7 @@ import { sendContactEmailAction } from "../actions";
 import { useRef, useTransition } from "react";
 import toast from "react-hot-toast";
 import Button from "./Button";
+import { noto_sans } from "../fonts";
 
 function ContactForm() {
   const formRef = useRef<HTMLFormElement>(null);
@@ -26,10 +27,10 @@ function ContactForm() {
     <form
       ref={formRef}
       action={handleSubmitContactForm}
-      className="w-full flex flex-col gap-y-2.5"
+      className={`${noto_sans.className} w-full flex flex-col gap-y-3.5`}
     >
       <div className="flex flex-col">
-        <label htmlFor="name" className="pl-2.5 text-neutral-400">
+        <label htmlFor="name" className="text-neutral-500">
           Name
         </label>
         <input
@@ -37,14 +38,14 @@ function ContactForm() {
           id="name"
           type="text"
           disabled={isPending}
-          className="mt-1.5 py-2 px-2.5 rounded-lg bg-neutral-800 text-neutral-400 placeholder:text-neutral-600 focus:outline-none focus:ring-1 focus:ring-orange-500"
+          className="mt-2 py-2.5 px-3.5 rounded-lg bg-neutral-900 text-neutral-500 placeholder:text-neutral-700 focus:outline-none focus:ring-1 focus:ring-orange-500"
           placeholder="Enter name"
           autoComplete="given-name"
           required
         />
       </div>
       <div className="flex flex-col">
-        <label htmlFor="email" className="pl-2.5 text-neutral-400">
+        <label htmlFor="email" className="text-neutral-500">
           Email
         </label>
         <input
@@ -52,14 +53,14 @@ function ContactForm() {
           id="email"
           type="email"
           disabled={isPending}
-          className="mt-1.5 py-2 px-2.5 rounded-lg bg-neutral-800 text-neutral-400 placeholder:text-neutral-600 focus:outline-none focus:ring-1 focus:ring-orange-500"
+          className="mt-2 py-2.5 px-3.5 rounded-lg bg-neutral-900 text-neutral-500 placeholder:text-neutral-700 focus:outline-none focus:ring-1 focus:ring-orange-500"
           placeholder="Enter email"
           autoComplete="email"
           required
         />
       </div>
       <div className="flex flex-col">
-        <label htmlFor="message" className="pl-2.5 text-neutral-400">
+        <label htmlFor="message" className="text-neutral-500">
           Message
         </label>
         <textarea
@@ -67,7 +68,7 @@ function ContactForm() {
           id="message"
           rows={4}
           disabled={isPending}
-          className="mt-1.5 py-2 px-2.5 rounded-lg resize-none bg-neutral-800 text-neutral-400 placeholder:text-neutral-600 focus:outline-none focus:ring-1 focus:ring-orange-500"
+          className="mt-2 py-2.5 px-3.5 rounded-lg resize-none bg-neutral-900 text-neutral-500 placeholder:text-neutral-700 focus:outline-none focus:ring-1 focus:ring-orange-500"
           placeholder="Enter message"
           autoComplete="off"
           required
