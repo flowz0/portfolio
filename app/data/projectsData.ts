@@ -26,7 +26,7 @@ const projectsData: ProjectData[] = [
   {
     id: 2,
     img: NodeJSBlog,
-    title: "Blog Site",
+    title: "Node.js Blog Website",
     desc: "A simple blog site to view all blogs and an admin page to create posts. Built with Node.js, Express.js, EJS, and Mongoose.",
     code: "https://github.com/flowz0/nodejs-blog",
     date: "2024-11-15"
