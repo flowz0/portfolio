@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import { FaExternalLinkAlt, FaGithub, FaCalendarAlt } from "react-icons/fa";
-import TestImage from "@/assets/test.png";
+import TestImage from "@/public/img/test.png";
 import Link from "next/link";
 import { noto_sans, poppins } from "../fonts";
 
