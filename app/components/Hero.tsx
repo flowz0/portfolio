@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <main
       id="about"
-      className="mt-12 mx-6 py-24 rounded-lg flex flex-col justify-center items-center sm:py-48"
+      className="mt-12 mx-6 py-24 rounded-lg flex flex-col justify-center items-center sm:py-44"
     >
       <h1
         className={`${poppins.className} text-4xl/none font-semibold text-neutral-300 sm:text-6xl/none`}
