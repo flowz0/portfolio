@@ -10,12 +10,12 @@ export default function ContactSocials({className, vertical = false}: SocialsPro
     return (
         <ul className={vertical ? `flex flex-col gap-y-4` : `flex gap-x-4 ${className}`}>
             <li>
-                <Link href="https://www.linkedin.com/in/billyflowers/" target="_blank" className="text-2xl text-neutral-400 hover:text-orange-500">
+                <Link href="https://www.linkedin.com/in/billyflowers/" target="_blank" className="text-2xl text-neutral-500 hover:text-orange-500">
                     <FaLinkedinIn />
                 </Link>
             </li>
             <li>
-                <Link href="https://github.com/flowz0" target="_blank" className="text-2xl text-neutral-400 hover:text-orange-500">
+                <Link href="https://github.com/flowz0" target="_blank" className="text-2xl text-neutral-500 hover:text-orange-500">
                     <FaGithub />
                 </Link>
             </li>

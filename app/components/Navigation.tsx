@@ -13,6 +13,7 @@ import Link from "next/link";
 import { usePathname,useRouter } from "next/navigation";
 
 import { useEffect, useState } from "react";
+import { noto_sans, poppins } from "../fonts";
 
 const navLinks = [
     { name: "Projects", href: "/projects" },
@@ -23,6 +24,8 @@ export default function Navigation() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const pathname = usePathname();
     const router = useRouter();
+
+    const defaultNavbarStyle = "fixed z-50 text-neutral-300 bg-neutral-950";
 
     useEffect(() => {
         setIsMenuOpen(false);
@@ -37,11 +40,11 @@ export default function Navigation() {
         <Navbar
             onMenuOpenChange={setIsMenuOpen}
             isMenuOpen={isMenuOpen}
-            className={isMenuOpen ? "fixed z-50 text-neutral-300 bg-neutral-900" : "fixed z-50 rounded-b-lg shadow-md text-neutral-300 bg-neutral-900"}
+            className={isMenuOpen ? defaultNavbarStyle : defaultNavbarStyle + " rounded-b-lg"}
         >
             <NavbarContent>
                 <NavbarBrand>
-                    <Link href={'/'} className="font-bold text-xl">{'<Billy />'}</Link>
+                    <Link href={'/'} className={`${poppins.className} font-bold text-xl`}>{'<Billy />'}</Link>
                 </NavbarBrand>
                 <NavbarMenuToggle
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -49,7 +52,7 @@ export default function Navigation() {
                 />
             </NavbarContent>
 
-            <NavbarContent className="hidden sm:flex gap-4" justify="end">
+            <NavbarContent className={`${noto_sans.className} hidden sm:flex gap-4`} justify="end">
                 {navLinks.map((link, index) => {
                     const isNavLinkActive = pathname.startsWith(link.href);
 
@@ -57,7 +60,7 @@ export default function Navigation() {
                         <NavbarItem key={index}>
                             <Link
                                 href={link.href}
-                                className={isNavLinkActive ? "pb-[1.13rem] font-bold text-lg border-b-2 text-orange-500 border-orange-500" : "text-lg text-neutral-400 hover:text-orange-500"}
+                                className={isNavLinkActive ? "pb-[1.13rem] border-b-2 text-orange-500 border-orange-500" : "text-neutral-400 hover:text-orange-500"}
                             >
                                 {link.name}
                             </Link>
@@ -65,7 +68,7 @@ export default function Navigation() {
                     )
                 })}
             </NavbarContent>
-            <NavbarMenu className="m-0 p-0 bg-neutral-900">
+            <NavbarMenu className={`${noto_sans.className} m-0 p-0 bg-neutral-950`}>
                 {navLinks.map((link, index) => {
                     const isNavLinkActive = pathname.startsWith(link.href);
 
@@ -74,7 +77,7 @@ export default function Navigation() {
                             <Link
                                 href={link.href}
                                 onClick={() => handleLinkClick(link.href)}
-                                className={isNavLinkActive ? "pl-6 text-lg border-l-1 text-orange-500 border-orange-500" : "pl-6 text-lg text-neutral-400"}
+                                className={isNavLinkActive ? "pl-6 border-l-1 text-orange-500 border-orange-500" : "pl-6 text-neutral-300"}
                             >
                                 {link.name}
                             </Link>

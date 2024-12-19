@@ -1,29 +1,29 @@
 import Project from "../components/Project";
 import projectsData from "../data/projectsData";
+import { noto_sans, poppins } from "../fonts";
 
 export default function page() {
   return (
-    <div className="m-4 flex flex-col gap-y-4 bg-neutral-950">
-      <div className="mt-16 py-8 rounded-lg flex flex-col items-center bg-neutral-900 sm:py-14">
-        <h2 className="text-sm/none text-orange-500">Projects</h2>
-        <h3 className="mt-4 text-4xl/none text-neutral-300 font-semibold sm:text-5xl/none">My Work</h3>
+    <div className="mt-12 mx-6 py-16 flex flex-col items-center">
+      <div className="flex flex-col items-center">
+        <h2 className={`${noto_sans.className} text-sm/none font-light text-orange-500`}>Projects</h2>
+        <h3 className={`${poppins.className} mt-4 text-4xl/none font-semibold text-neutral-300 sm:text-5xl/none`}>
+          My Work
+        </h3>
       </div>
-      <div className='px-4 py-6 rounded-lg flex flex-col items-center bg-neutral-900 sm:py-20'>
-        <div className="flex flex-wrap justify-center gap-8 sm:gap-4 sm:max-w-7xl">
-          {projectsData.map((project, index) => (
-            <Project
-              key={index}
-              img={project.img}
-              title={project.title}
-              desc={project.desc}
-              site={project.site}
-              code={project.code}
-              date={project.date}
-            />
-          ))}
-        </div>
+      <div className="mt-8 flex flex-wrap justify-center gap-8 sm:gap-6 max-w-7xl">
+        {projectsData.map((project, index) => (
+          <Project
+            key={index}
+            img={project.img}
+            title={project.title}
+            desc={project.desc}
+            site={project.site}
+            code={project.code}
+            date={project.date}
+          />
+        ))}
       </div>
-
     </div>
-  )
+  );
 }

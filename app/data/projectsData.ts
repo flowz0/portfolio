@@ -18,7 +18,7 @@ const projectsData: ProjectData[] = [
     id: 1,
     img: ProjectImgDDDC,
     title: "Duct Daddy Duct Cleaning",
-    desc: "HVAC cleaning service website built with Next.js, TypeScript, SendGrid, and TailwindCSS...",
+    desc: "I built an HVAC cleaning service marketing website with Next.js and Tailwind CSS. I learned how to integrate SendGrid for email automation and how to use TypeScript with Next.js.",
     site: "https://www.ductdaddykc.com/",
     code: "https://github.com/flowz0/dddc",
     date: "2024-12-09"
