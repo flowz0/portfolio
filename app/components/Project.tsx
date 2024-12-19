@@ -40,7 +40,7 @@ export default function Project({
         alt={`${title} project image`}
         quality={100}
         priority={false}
-        className="object-cover h-64 w-full rounded-lg sm:h-72 sm:rounded-t-lg sm:rounded-b-none"
+        className="object-cover h-72 w-full rounded-lg sm:rounded-t-lg sm:rounded-b-none"
       />
       <div className="py-3 flex flex-col justify-between h-full sm:py-3.5 sm:px-5">
         <div>
