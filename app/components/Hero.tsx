@@ -20,12 +20,12 @@ export default function Hero() {
         I&apos;m a <RoleTypeWriter />
       </p>
       <ContactSocials className="mt-5" />
-      <Link href={`/billys-resume.pdf`} target="_blank">
+      <Link href={`/resume/billys-resume.pdf`} target="_blank">
         <button
           type="button"
           className={`${noto_sans.className} mt-6 flex py-2 px-3.5 rounded-lg bg-neutral-700 text-neutral-400 hover:bg-neutral-800 active:scale-95`}
         >
-          View CV
+          CV
         </button>
       </Link>
     </main>
