@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
-import TestImage from "@/assets/test.png";
-import ProjectImgDDDC from "@/assets/project-dddc.png";
-import NodeJSBlog from "@/assets/nodejs-blog.png";
+import TestImage from "@/public/img/test.png";
+import ProjectImgDDDC from "@/public/img/project-dddc.png";
+import NodeJSBlog from "@/public/img/nodejs-blog.png";
 
 export interface ProjectData {
   id: number;
