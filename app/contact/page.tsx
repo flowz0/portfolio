@@ -4,7 +4,7 @@ import { noto_sans, poppins } from "../fonts"
 
 export default function page() {
     return (
-        <div className="h-screen max-w-xl mt-12 mx-auto px-6 pt-16 flex flex-col w-full">
+        <section className="h-screen max-w-xl mx-auto px-6 pt-20 pb-16 flex flex-col w-full">
             <div className="flex flex-col items-center">
                 <h2 className={`${noto_sans.className} text-sm/none font-light text-orange-500`}>Contact</h2>
                 <h3 className={`${poppins.className} mt-4 text-4xl/none font-semibold text-neutral-300 sm:text-5xl/none`}>Let&apos;s Work</h3>
@@ -17,6 +17,6 @@ export default function page() {
                     <ContactForm />
                 </div>
             </div>
-        </div> 
+        </section> 
     )
 }

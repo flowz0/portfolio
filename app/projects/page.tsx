@@ -4,7 +4,7 @@ import { noto_sans, poppins } from "../fonts";
 
 export default function page() {
   return (
-    <div className="mt-12 mx-6 py-16 flex flex-col items-center">
+    <div className="mx-6 pt-20 pb-16 flex flex-col items-center">
       <div className="flex flex-col items-center">
         <h2 className={`${noto_sans.className} text-sm/none font-light text-orange-500`}>Projects</h2>
         <h3 className={`${poppins.className} mt-4 text-4xl/none font-semibold text-neutral-300 sm:text-5xl/none`}>
