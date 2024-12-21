@@ -22,13 +22,23 @@ const navLinks = [
 
 export default function Navigation() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
     const pathname = usePathname();
     const router = useRouter();
 
-    const defaultNavbarStyle = "fixed z-50 text-neutral-300 bg-neutral-950";
+    const defaultNavbarStyle = "fixed z-50 text-neutral-300 transition-colors duration-300";
+    const scrolledNavbarStyle = "bg-neutral-950"
 
     useEffect(() => {
         setIsMenuOpen(false);
+
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 0);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+
     }, [pathname]);
 
     const handleLinkClick = (href: string) => {
@@ -40,7 +50,8 @@ export default function Navigation() {
         <Navbar
             onMenuOpenChange={setIsMenuOpen}
             isMenuOpen={isMenuOpen}
-            className={isMenuOpen ? defaultNavbarStyle : defaultNavbarStyle + " rounded-b-lg"}
+            className={`${defaultNavbarStyle} ${isScrolled ? scrolledNavbarStyle : "bg-transparent"} ${isMenuOpen ? "bg-neutral-950" : "rounded-b-lg"}`}
+            isBlurred={false}
         >
             <NavbarContent>
                 <NavbarBrand>
@@ -68,16 +79,16 @@ export default function Navigation() {
                     )
                 })}
             </NavbarContent>
-            <NavbarMenu className={`${noto_sans.className} m-0 p-0 bg-neutral-950`}>
+            <NavbarMenu className={`${noto_sans.className} px-4 flex justify-center items-center gap-y-4 bg-neutral-950`}>
                 {navLinks.map((link, index) => {
                     const isNavLinkActive = pathname.startsWith(link.href);
 
                     return (
-                        <NavbarMenuItem key={index}>
+                        <NavbarMenuItem key={index} className="text-xl -translate-y-16 flex items-center justify-center">
                             <Link
                                 href={link.href}
                                 onClick={() => handleLinkClick(link.href)}
-                                className={isNavLinkActive ? "pl-6 border-l-1 text-orange-500 border-orange-500" : "pl-6 text-neutral-300"}
+                                className={isNavLinkActive ? "text-orange-500" : "text-neutral-500"}
                             >
                                 {link.name}
                             </Link>
