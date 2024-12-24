@@ -23,9 +23,9 @@ export default function Hero() {
         <Link href={`/resume/billys-resume.pdf`} target="_blank">
           <button
             type="button"
-            className={`${noto_sans.className} mt-6 flex py-2 px-3.5 rounded-lg bg-neutral-700 text-neutral-400 hover:bg-neutral-800 active:scale-95`}
+            className={`${noto_sans.className} mt-4 flex py-2 px-3.5 rounded-lg bg-neutral-700 text-neutral-400 hover:bg-neutral-800 active:scale-95`}
           >
-            CV
+            View CV
           </button>
         </Link>
       </main>

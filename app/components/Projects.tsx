@@ -25,23 +25,15 @@ export default function Projects() {
         My Work
       </h3>
       <div className="mt-8 flex flex-wrap justify-center gap-y-8 gap-x-4 sm:mx-4 sm:gap-y-4">
-        {recentProjects.map((project, index) => (
-          <Project
-            key={index}
-            img={project.img}
-            title={project.title}
-            desc={project.desc}
-            site={project.site}
-            code={project.code}
-            date={project.date}
-          />
+        {recentProjects.map((project) => (
+          <Project key={project.id} {...project} />
         ))}
       </div>
       <Link
         href="/projects"
         className="mt-6 text-neutral-500 hover:text-orange-500"
       >
-        View All Projects
+        Show All Projects
       </Link>
     </section>
   );

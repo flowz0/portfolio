@@ -12,16 +12,8 @@ export default function page() {
         </h3>
       </div>
       <div className="mt-8 flex flex-wrap justify-center gap-8 sm:gap-6 max-w-7xl">
-        {projectsData.map((project, index) => (
-          <Project
-            key={index}
-            img={project.img}
-            title={project.title}
-            desc={project.desc}
-            site={project.site}
-            code={project.code}
-            date={project.date}
-          />
+        {projectsData.map((project) => (
+          <Project key={project.id} {...project} />
         ))}
       </div>
     </div>

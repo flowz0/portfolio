@@ -1,26 +1,23 @@
 import Image, { StaticImageData } from "next/image";
-import { FaExternalLinkAlt, FaGithub, FaCalendarAlt } from "react-icons/fa";
-import TestImage from "@/public/img/test.png";
 import Link from "next/link";
+import { FaExternalLinkAlt, FaGithub, FaCalendarAlt } from "react-icons/fa";
 import { noto_sans, poppins } from "../fonts";
+import { ProjectData } from "../data/projectsData";
+import TestImage from "@/public/img/test.png";
 
-interface ProjectProps {
+type ProjectProps = ProjectData & {
   img?: string | StaticImageData;
-  title: string;
-  desc: string;
-  date: string;
-  site?: string;
-  code?: string;
 }
 
 export default function Project({
+  id,
   img = TestImage,
   title,
   desc,
   date,
   site,
   code,
-}: ProjectProps) {
+}: ProjectProps & { id: number }) {
   // Function to form date
   const formatDate = (dateString: string) => {
     const options: Intl.DateTimeFormatOptions = {
@@ -34,20 +31,19 @@ export default function Project({
   // const projectId = title.toLowerCase().replace(/\s+/g, '-');
 
   return (
-    <div className="h-full w-full max-w-sm sm:bg-neutral-900 sm:rounded-lg">
+    <div className="h-full w-full max-w-sm sm:bg-neutral-900 sm:rounded">
       <Image
         src={img}
         alt={`${title} project image`}
-        quality={100}
-        priority={false}
-        className="object-cover h-72 w-full rounded-lg sm:rounded-t-lg sm:rounded-b-none"
+        className="object-cover rounded sm:rounded-t sm:rounded-b-none"
+        priority={true}
       />
-      <div className="py-3 flex flex-col justify-between h-full sm:py-3.5 sm:px-5">
+      <div className="pt-2 pb-3 px-2 flex flex-col justify-between h-full sm:pt-2.5 sm:pb-4 sm:px-5 bg-neutral-950 sm:bg-transparent">
         <div>
-          <h4 className={`${poppins.className} text-2xl/9 font-semibold text-neutral-300`}>
-            <Link href={"/projects"}>{title}</Link>
+          <h4 className={`${poppins.className} text-2xl/9 font-semibold text-neutral-300 hover:text-orange-500`}>
+            <Link href={`/projects/${id}`}>{title}</Link>
           </h4>
-          <p className={`${noto_sans.className} mt-2 text-base/7 line-clamp-3 text-neutral-300`}>
+          <p className={`${noto_sans.className} mt-1 text-base/6 line-clamp-3 text-neutral-300 sm:mt-0.5`}>
             {desc}
           </p>
           <p className={`${noto_sans.className} mt-3 flex items-center text-sm/none text-neutral-400`}>
@@ -56,12 +52,12 @@ export default function Project({
           </p>
         </div>
         <div className="mt-5 flex justify-between items-baseline">
-          <Link href="/projects">
+          <Link href={`/projects/${id}`}>
             <button
               type="button"
               className={`${noto_sans.className} flex py-2 px-3.5 rounded-lg bg-neutral-700 text-neutral-400 hover:bg-neutral-800 active:scale-95`}
             >
-              Show details
+              View project
             </button>
           </Link>
           <div className="flex gap-x-3">

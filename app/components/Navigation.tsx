@@ -55,7 +55,9 @@ export default function Navigation() {
         >
             <NavbarContent>
                 <NavbarBrand>
-                    <Link href={'/'} className={`${poppins.className} font-bold text-xl`}>{'<Billy />'}</Link>
+                    <Link href={'/'} className={`${poppins.className} font-bold text-xl`}>
+                        {'<flowz0 />'}
+                    </Link>
                 </NavbarBrand>
                 <NavbarMenuToggle
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}
