@@ -38,7 +38,7 @@ function ContactForm() {
           id="name"
           type="text"
           disabled={isPending}
-          className="mt-2 py-2.5 px-3.5 rounded-lg bg-neutral-900 text-neutral-500 placeholder:text-neutral-700 focus:outline-none focus:ring-1 focus:ring-orange-500"
+          className="mt-2 py-2.5 px-3.5 rounded-lg bg-neutral-900 text-neutral-500 placeholder:text-neutral-700 focus:outline-none focus:ring-1 focus:ring-teal-500"
           placeholder="Enter name"
           autoComplete="given-name"
           required
@@ -53,7 +53,7 @@ function ContactForm() {
           id="email"
           type="email"
           disabled={isPending}
-          className="mt-2 py-2.5 px-3.5 rounded-lg bg-neutral-900 text-neutral-500 placeholder:text-neutral-700 focus:outline-none focus:ring-1 focus:ring-orange-500"
+          className="mt-2 py-2.5 px-3.5 rounded-lg bg-neutral-900 text-neutral-500 placeholder:text-neutral-700 focus:outline-none focus:ring-1 focus:ring-teal-500"
           placeholder="Enter email"
           autoComplete="email"
           required
@@ -68,14 +68,14 @@ function ContactForm() {
           id="message"
           rows={4}
           disabled={isPending}
-          className="mt-2 py-2.5 px-3.5 rounded-lg resize-none bg-neutral-900 text-neutral-500 placeholder:text-neutral-700 focus:outline-none focus:ring-1 focus:ring-orange-500"
+          className="mt-2 py-2.5 px-3.5 rounded-lg resize-none bg-neutral-900 text-neutral-500 placeholder:text-neutral-700 focus:outline-none focus:ring-1 focus:ring-teal-500"
           placeholder="Enter message"
           autoComplete="off"
           required
         />
       </div>
 
-      <Button className="self-end" text="Message" submit />
+      <Button className="self-end" text="Message" variant="animated" submit />
     </form>
   );
 }
