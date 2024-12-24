@@ -35,7 +35,7 @@ export default function Project({
       <Image
         src={img}
         alt={`${title} project image`}
-        className="object-cover rounded sm:rounded-t sm:rounded-b-none"
+        className="object-cover h-64 rounded sm:rounded-t sm:rounded-b-none"
         priority={true}
       />
       <div className="pt-2 pb-3 px-2 flex flex-col justify-between h-full sm:pt-2.5 sm:pb-4 sm:px-5 bg-neutral-950 sm:bg-transparent">
