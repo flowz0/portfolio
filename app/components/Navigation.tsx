@@ -106,7 +106,7 @@ export default function Navigation() {
                 href={link.href}
                 onClick={() => handleLinkClick(link.href)}
                 className={
-                  isNavLinkActive ? "text-orange-500" : "text-neutral-500"
+                  isNavLinkActive ? "text-cyan-500" : "text-neutral-500"
                 }
               >
                 {link.name}
