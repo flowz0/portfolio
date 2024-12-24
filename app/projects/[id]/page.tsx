@@ -16,7 +16,7 @@ export default async function ProjectDetails({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  const {id} = await params;
+  const { id } = await params;
   const projectId = parseInt(id);
   const project = projectsData.find((p) => p.id === projectId);
 
@@ -34,29 +34,31 @@ export default async function ProjectDetails({
 
   return (
     <main className="mx-6 mt-20 max-w-2xl sm:mx-auto">
-      <h2
-        className={`${noto_sans.className} text-center text-sm/none font-light text-orange-500`}
-      >
-        Details
-      </h2>
-      <h3
-        className={`${poppins.className} text-center mt-4 text-4xl/none font-semibold text-neutral-300 sm:text-5xl/none`}
-      >
-        Project 0{project.id}
-      </h3>
-      <div className="mt-8 flex justify-between items-baseline sm:mt-12">
+      <div className="flex flex-col items-center">
+        <h2
+          className={`${noto_sans.className} text-sm font-light bg-gradient-to-r from-cyan-500 to-teal-400 inline-block text-transparent bg-clip-text`}
+        >
+          Details
+        </h2>
+        <h3
+          className={`${poppins.className} mt-4 text-4xl font-semibold bg-gradient-to-r from-neutral-300 to-neutral-400 inline-block text-transparent bg-clip-text sm:text-5xl/normal`}
+        >
+          Project 00{project.id}
+        </h3>
+      </div>
+      <div className="mt-8 flex justify-between items-center sm:mt-12">
         <p
-          className={`${noto_sans.className} flex items-center text-neutral-500`}
+          className={`${noto_sans.className} flex items-center text-neutral-400`}
         >
           <FaCalendarAlt className="mr-2" />
           {formatDate(project.date)}
         </p>
-        <div className="flex gap-2.5 text-xl">
+        <div className="flex gap-2 text-xl">
           {project.site && (
             <Link
               href={project.site}
               target="_blank"
-              className="text-neutral-500 hover:scale-110 hover:text-orange-500"
+              className="transition ease-in-out delay-75 duration-300 text-neutral-500 hover:text-teal-500 hover:scale-105 hover:-translate-y-1 active:scale-95"
             >
               <FaExternalLinkAlt />
             </Link>
@@ -65,7 +67,7 @@ export default async function ProjectDetails({
             <Link
               href={project.code}
               target="_blank"
-              className="text-neutral-500 hover:scale-110 hover:text-orange-500"
+              className="transition ease-in-out delay-75 duration-300 text-neutral-500 hover:text-teal-500 hover:scale-105 hover:-translate-y-1 active:scale-95"
             >
               <FaGithub />
             </Link>
@@ -75,53 +77,41 @@ export default async function ProjectDetails({
       <Image
         src={project.img}
         alt={`${project.title} project image`}
-        className="mt-2 h-full w-auto rounded"
+        className="mt-4 h-full w-auto rounded"
       />
       <h2
-        className={`${poppins.className} mt-4 text-3xl font-semibold text-neutral-300 sm:text-5xl`}
+        className={`${poppins.className} mt-4 text-3xl font-semibold bg-gradient-to-r from-neutral-300 to-neutral-400 inline-block text-transparent bg-clip-text sm:text-4xl/relaxed`}
       >
         {project.title}
       </h2>
-      <p className={`${noto_sans.className} mt-4 text-lg text-neutral-300`}>
+      <p className={`${noto_sans.className} mt-4 text-lg text-neutral-400`}>
         {project.desc}
       </p>
-      {/* 
-        Project Article
-      */}
+
       <ul className="mt-12 flex flex-col gap-y-12">
-        {/* 
-          SECTION 1
-          SECTION 1
-          SECTION 1
-        */}
         {project.lessons && (
           <li>
             <h3
-              className={`${poppins.className} text-3xl font-semibold text-neutral-300 sm:text-4xl`}
+              className={`${poppins.className} text-3xl font-semibold bg-gradient-to-r from-neutral-400 to-neutral-500 inline-block text-transparent leading-noraml bg-clip-text sm:text-4xl/relaxed`}
             >
-              What I learned
+              What I Learned
             </h3>
             <p
-              className={`${noto_sans.className} mt-4 text-lg text-neutral-300`}
+              className={`${noto_sans.className} mt-4 text-lg text-neutral-400`}
             >
               {project.lessons}
             </p>
           </li>
         )}
-        {/* 
-          SECTION 2
-          SECTION 2
-          SECTION 2
-        */}
         {project.challenges && (
           <li>
             <h3
-              className={`${poppins.className} text-3xl font-semibold text-neutral-300 sm:text-4xl`}
+              className={`${poppins.className} text-3xl font-semibold bg-gradient-to-r from-neutral-400 to-neutral-500 inline-block text-transparent bg-clip-text sm:text-4xl/relaxed`}
             >
-              Challenges I faced
+              Challenges I Faced
             </h3>
             <p
-              className={`${noto_sans.className} mt-4 text-lg text-neutral-300`}
+              className={`${noto_sans.className} mt-4 text-lg text-neutral-400`}
             >
               {project.challenges}
             </p>
