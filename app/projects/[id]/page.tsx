@@ -77,7 +77,7 @@ export default async function ProjectDetails({
       <Image
         src={project.img}
         alt={`${project.title} project image`}
-        className="mt-4 h-full w-auto rounded"
+        className="mt-4 h-auto w-full rounded"
       />
       <h2
         className={`${poppins.className} mt-4 text-3xl font-semibold bg-gradient-to-r from-neutral-300 to-neutral-400 inline-block text-transparent bg-clip-text sm:text-4xl/relaxed`}
