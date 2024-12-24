@@ -2,7 +2,7 @@ import { StaticImageData } from "next/image";
 import ProjectImgDDDC from "@/public/img/project-dddc.png";
 import NodeJSBlog from "@/public/img/nodejs-blog.png";
 import DuctPond from "@/public/img/duckpond.png";
-import WeatherApp from "@/public/img/WeatherApp.png";
+import WeatherApp from "@/public/img/weatherapp.png";
 import AdventureGame from "@/public/img/adventuregame.png";
 
 export interface ProjectData {
