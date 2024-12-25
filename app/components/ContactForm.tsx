@@ -38,7 +38,7 @@ function ContactForm() {
           id="name"
           type="text"
           disabled={isPending}
-          className="mt-2 py-2.5 px-3.5 rounded-lg bg-neutral-900 text-neutral-500 placeholder:text-neutral-700 focus:outline-none focus:ring-1 focus:ring-teal-500"
+          className="mt-2 py-2.5 px-3.5 rounded-lg bg-neutral-900 text-neutral-500 placeholder:text-neutral-700 focus:outline-none focus:ring-2 focus:ring-teal-500 hover:ring-2 hover:ring-teal-500/50 transition ease-in-out delay-75 duration-300 hover:scale-105 hover:-translate-y-1 active:scale-95"
           placeholder="Enter name"
           autoComplete="given-name"
           required
@@ -53,7 +53,7 @@ function ContactForm() {
           id="email"
           type="email"
           disabled={isPending}
-          className="mt-2 py-2.5 px-3.5 rounded-lg bg-neutral-900 text-neutral-500 placeholder:text-neutral-700 focus:outline-none focus:ring-1 focus:ring-teal-500"
+          className="mt-2 py-2.5 px-3.5 rounded-lg bg-neutral-900 text-neutral-500 placeholder:text-neutral-700 focus:outline-none focus:ring-2 focus:ring-teal-500 hover:ring-2 hover:ring-teal-500/50 transition ease-in-out delay-75 duration-300 hover:scale-105 hover:-translate-y-1 active:scale-95"
           placeholder="Enter email"
           autoComplete="email"
           required
@@ -68,14 +68,14 @@ function ContactForm() {
           id="message"
           rows={4}
           disabled={isPending}
-          className="mt-2 py-2.5 px-3.5 rounded-lg resize-none bg-neutral-900 text-neutral-500 placeholder:text-neutral-700 focus:outline-none focus:ring-1 focus:ring-teal-500"
+          className="mt-2 py-2.5 px-3.5 rounded-lg resize-none bg-neutral-900 text-neutral-500 placeholder:text-neutral-700 focus:outline-none focus:ring-2 focus:ring-teal-500 hover:ring-2 hover:ring-teal-500/50 transition ease-in-out delay-75 duration-300 hover:scale-105 hover:-translate-y-1 active:scale-95"
           placeholder="Enter message"
           autoComplete="off"
           required
         />
       </div>
 
-      <Button className="self-end" text="Message" variant="animated" submit />
+      <Button className="self-end" text="Contact" variant="animated" submit />
     </form>
   );
 }

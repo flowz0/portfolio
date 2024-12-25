@@ -24,7 +24,7 @@ export default function Projects() {
       <h3 className={`${poppins.className} mt-4 text-4xl font-semibold bg-gradient-to-r from-neutral-300 to-neutral-400 inline-block text-transparent bg-clip-text sm:text-5xl`}>
         My Work
       </h3>
-      <div className="mt-8 flex flex-wrap justify-center gap-y-8 gap-x-4 sm:mx-4 sm:gap-y-4">
+      <div className="mt-8 flex flex-wrap justify-center gap-6 sm:mx-4">
         {recentProjects.map((project) => (
           <Project key={project.id} {...project} />
         ))}

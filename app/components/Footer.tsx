@@ -8,7 +8,7 @@ export default function Footer() {
         © 2024 Billy Flowers. All rights reserved. Created by{" "}
         <Link
           href="/"
-          className="font-medium bg-gradient-to-r from-cyan-500 to-teal-400 inline-block text-transparent bg-clip-text"
+          className="font-medium bg-gradient-to-r from-cyan-500 to-teal-400 inline-block text-transparent bg-clip-text transition ease-in-out delay-75 duration-300 hover:scale-105 hover:-translate-y-1 active:scale-95"
         >
           flowz0
         </Link>
