@@ -11,7 +11,7 @@ export default function page() {
           My Work
         </h3>
       </div>
-      <div className="mt-8 flex flex-wrap justify-center gap-8 sm:gap-6 max-w-7xl">
+      <div className="mt-8 flex flex-wrap justify-center gap-6 max-w-7xl">
         {projectsData.map((project) => (
           <Project key={project.id} {...project} />
         ))}

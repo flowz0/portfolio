@@ -80,8 +80,8 @@ export default function Navigation() {
                 href={link.href}
                 className={
                   isNavLinkActive
-                    ? "pb-[1.13rem] transition ease-in-out delay-75 duration-300 border-b-2 text-teal-500 border-teal-500"
-                    : "transition ease-in-out delay-75 duration-300 text-neutral-400 hover:text-teal-500"
+                    ? "pb-[1.13rem] border-b-2 border-teal-500 bg-gradient-to-r from-cyan-500 to-teal-400 text-transparent bg-clip-text"
+                    : "text-neutral-400 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-teal-400 hover:inline-block hover:text-transparent hover:bg-clip-text"
                 }
               >
                 {link.name}
@@ -100,13 +100,13 @@ export default function Navigation() {
           return (
             <NavbarMenuItem
               key={index}
-              className="text-xl -translate-y-16 flex items-center justify-center"
+              className="text-lg -translate-y-16 flex items-center justify-center"
             >
               <Link
                 href={link.href}
                 onClick={() => handleLinkClick(link.href)}
                 className={
-                  isNavLinkActive ? "text-cyan-500" : "text-neutral-500"
+                  isNavLinkActive ? "bg-gradient-to-r from-cyan-500 to-teal-400 inline-block text-transparent bg-clip-text" : "text-neutral-500"
                 }
               >
                 {link.name}

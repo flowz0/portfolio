@@ -24,7 +24,7 @@ export default function RootLayout({
           <Footer />
         </NextUIProvider>
         <Toaster 
-          position="top-center" 
+          position="bottom-center" 
           reverseOrder={false}
           toastOptions={{
             style: {
