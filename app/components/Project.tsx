@@ -4,6 +4,7 @@ import { FaExternalLinkAlt, FaGithub, FaCalendarAlt } from "react-icons/fa";
 import { noto_sans, poppins } from "../fonts";
 import { ProjectData } from "../data/projectsData";
 import TestImage from "@/public/img/test.png";
+import Button from "./Button";
 
 type ProjectProps = ProjectData & {
   img?: string | StaticImageData;
@@ -18,7 +19,7 @@ export default function Project({
   site,
   code,
 }: ProjectProps & { id: number }) {
-  const iconClass = "text-xl transition ease-in-out delay-75 duration-300 text-neutral-500 hover:text-teal-500 hover:scale-105 hover:-translate-y-1 active:scale-95";
+  const iconClass = "text-2xl transition ease-in-out delay-75 duration-300 text-neutral-500 hover:text-teal-500 hover:scale-105 hover:-translate-y-1 active:scale-95";
 
   // Function to form date
   const formatDate = (dateString: string) => {
@@ -55,14 +56,12 @@ export default function Project({
         </div>
         <div className="mt-5 flex justify-between items-baseline">
           <Link href={`/projects/${id}`}>
-            <button
-              type="button"
-              className={`${noto_sans.className} inline-block py-2 px-3.5 rounded-lg transition ease-in-out delay-75 duration-300 bg-gradient-to-r from-neutral-700 to-neutral-800 text-neutral-400 hover:scale-105 hover:-translate-y-1 active:scale-95`}
-            >
-              View project
-            </button>
+            <Button
+              text="View Project"
+              variant="outlined"
+            />
           </Link>
-          <div className="flex gap-x-2">
+          <div className="flex gap-x-3">
             {site && (
               <Link
                 href={site}
