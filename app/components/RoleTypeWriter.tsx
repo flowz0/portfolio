@@ -6,7 +6,7 @@ export default function RoleTypeWriter() {
   return (
     <Typewriter
       words={["Full Stack Developer", "Designer", "Tech Enthusiast", "Software Engineer"]}
-      loop={2}
+      loop={3}
     />
   )
 }
