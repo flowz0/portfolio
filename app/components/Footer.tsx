@@ -3,7 +3,7 @@ import { arimo } from "@/app/fonts";
 
 export default function Footer() {
   return (
-    <div className="mx-6 text-center">
+    <footer className="relative mx-6 text-center">
       <h6
         className={`${arimo.className} pt-8 pb-12 text-base leading-normal tracking-normal text-neutral-500 sm:text-lg`}
       >
@@ -15,6 +15,6 @@ export default function Footer() {
           flowz0
         </Link>
       </h6>
-    </div>
+    </footer>
   );
 }
