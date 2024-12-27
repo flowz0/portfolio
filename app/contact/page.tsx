@@ -1,22 +1,32 @@
-import ContactForm from '../components/ContactForm'
-import ContactSocials from '../components/ContactSocials'
-import { noto_sans, poppins } from "../fonts"
+import ContactForm from "../components/ContactForm";
+import ContactSocials from "../components/ContactSocials";
+import { arimo, nunito } from "../fonts";
 
 export default function page() {
-    return (
-        <section className="min-h-[calc(100vh-160px)] max-w-xl mx-auto px-6 pt-20 flex flex-col w-full">
-            <div className="flex flex-col items-center">
-                <h2 className={`${noto_sans.className} text-sm font-light bg-gradient-to-r from-cyan-500 to-teal-400 inline-block text-transparent bg-clip-text`}>Contact</h2>
-                <h3 className={`${poppins.className} mt-4 text-4xl font-semibold bg-gradient-to-r from-neutral-300 to-neutral-400 inline-block text-transparent bg-clip-text sm:text-5xl`}>Let&apos;s Work</h3>
-            </div>
-            <div className="mt-8">
-                <div className="flex justify-center">
-                    <ContactSocials />
-                </div>
-                <div className="mt-4">
-                    <ContactForm />
-                </div>
-            </div>
-        </section> 
-    )
+  return (
+    <article className="mx-6 mt-12 py-12 flex flex-col items-center">
+      <section className="w-full max-w-md">
+        <header className="flex flex-col items-center">
+          <h2
+            className={`${nunito.className} text-base leading-normal tracking-normal text-teal-400 sm:text-lg`}
+          >
+            Contact
+          </h2>
+          <h3
+            className={`${arimo.className} mt-2 leading-normal tracking-normal text-4xl font-bold sm:text-5xl`}
+          >
+            Let&apos;s Work
+          </h3>
+        </header>
+        <ul className="mt-8">
+          <li className="flex justify-center">
+            <ContactSocials />
+          </li>
+          <li className="mt-6">
+            <ContactForm />
+          </li>
+        </ul>
+      </section>
+    </article>
+  );
 }

@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-neutral-950 text-neutral-300">
+    <html lang="en" className="bg-neutral-950 text-neutral-200">
       <body className="antialiased">
         <NextUIProvider>
           <Navigation />

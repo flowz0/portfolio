@@ -1,18 +1,20 @@
 import Link from "next/link";
-import { noto_sans } from "../fonts";
+import { arimo } from "@/app/fonts";
 
 export default function Footer() {
   return (
     <div className="mx-6 text-center">
-      <p className={`${noto_sans.className} pt-8 pb-12 text-sm/6 font-light tracking-widest bg-gradient-to-r from-neutral-300 to-neutral-400 inline-block text-transparent bg-clip-text`}>
+      <h6
+        className={`${arimo.className} pt-8 pb-12 text-base leading-normal tracking-normal text-neutral-500 sm:text-lg`}
+      >
         © 2024 Billy Flowers. All rights reserved. Created by{" "}
         <Link
           href="/"
-          className="font-medium bg-gradient-to-r from-cyan-500 to-teal-400 inline-block text-transparent bg-clip-text transition ease-in-out delay-75 duration-300 hover:scale-105 hover:-translate-y-1 active:scale-95"
+          className="underline transition ease-in-out delay-75 duration-300 hover:text-teal-400"
         >
           flowz0
         </Link>
-      </p>
+      </h6>
     </div>
   );
 }

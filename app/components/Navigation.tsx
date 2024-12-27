@@ -13,7 +13,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 
 import { useEffect, useState } from "react";
-import { noto_sans, poppins } from "../fonts";
+import { arimo } from "@/app/fonts";
 
 const navLinks = [
   { name: "Projects", href: "/projects" },
@@ -57,8 +57,11 @@ export default function Navigation() {
     >
       <NavbarContent>
         <NavbarBrand>
-          <Link href={"/"} className={`${poppins.className} font-bold text-lg bg-gradient-to-r from-neutral-300 to-neutral-400 inline-block text-transparent bg-clip-text transition ease-in-out delay-75 duration-300 hover:scale-105 hover:translate-y-1 active:scale-95`}>
-            {"<flowz0 />"}
+          <Link
+            href={"/"}
+            className={`${arimo.className} text-xl font-bold transition ease-in-out delay-75 duration-200 hover:scale-110 active:scale-90`}
+          >
+            flowz0
           </Link>
         </NavbarBrand>
         <NavbarMenuToggle
@@ -67,21 +70,18 @@ export default function Navigation() {
         />
       </NavbarContent>
 
-      <NavbarContent
-        className={`${noto_sans.className} hidden sm:flex gap-4`}
-        justify="end"
-      >
+      <NavbarContent className="hidden sm:flex sm:gap-x-6" justify="end">
         {navLinks.map((link, index) => {
           const isNavLinkActive = pathname.startsWith(link.href);
 
           return (
-            <NavbarItem key={index}>
+            <NavbarItem key={index} className={`${arimo.className}`}>
               <Link
                 href={link.href}
                 className={
                   isNavLinkActive
-                    ? "pb-[1.13rem] border-b-2 border-teal-500 bg-gradient-to-r from-cyan-500 to-teal-400 text-transparent bg-clip-text"
-                    : "text-neutral-400 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-teal-400 hover:inline-block hover:text-transparent hover:bg-clip-text"
+                    ? `text-neutral-300`
+                    : `text-neutral-500 hover:text-neutral-400`
                 }
               >
                 {link.name}
@@ -89,24 +89,23 @@ export default function Navigation() {
             </NavbarItem>
           );
         })}
-
       </NavbarContent>
-      <NavbarMenu
-        className={`${noto_sans.className} px-4 flex justify-center items-center gap-y-4 bg-neutral-950`}
-      >
+      <NavbarMenu className="px-6 flex justify-center items-center gap-y-4 bg-neutral-950">
         {navLinks.map((link, index) => {
           const isNavLinkActive = pathname.startsWith(link.href);
 
           return (
             <NavbarMenuItem
               key={index}
-              className="text-lg -translate-y-16 flex items-center justify-center"
+              className={`${arimo.className} -translate-y-16 flex items-center justify-center`}
             >
               <Link
                 href={link.href}
                 onClick={() => handleLinkClick(link.href)}
                 className={
-                  isNavLinkActive ? "bg-gradient-to-r from-cyan-500 to-teal-400 inline-block text-transparent bg-clip-text" : "text-neutral-500"
+                  isNavLinkActive
+                    ? "text-neutral-300"
+                    : "text-neutral-500 hover:text-neutral-400"
                 }
               >
                 {link.name}

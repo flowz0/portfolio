@@ -1,20 +1,20 @@
-import { noto_sans, poppins } from "../fonts";
+import { arimo, nunito } from "../fonts";
 import ContactForm from "./ContactForm";
 
 export default function Contact() {
   return (
-    <section className="px-6 py-12 rounded-lg flex flex-col items-center justify-center sm:py-16">
-      <div className="w-full flex flex-col items-center">
-        <h2 className={`${noto_sans.className} text-sm font-light bg-gradient-to-r from-cyan-500 to-teal-400 inline-block text-transparent bg-clip-text`}>
-          Contact
+    <article className="px-6 py-12 flex flex-col items-center sm:py-24">
+      <header className="w-full flex flex-col items-center">
+        <h2 className={`${nunito.className} text-base leading-normal tracking-normal text-teal-400 sm:text-lg`}>
+          <small>Contact</small>
         </h2>
-        <h3 className={`${poppins.className} mt-4 text-4xl font-semibold bg-gradient-to-r from-neutral-300 to-neutral-400 inline-block text-transparent bg-clip-text sm:text-5xl`}>
+        <h3 className={`${arimo.className} mt-2 leading-normal tracking-normal text-4xl font-bold sm:text-5xl`}>
           Let&apos;s Work
         </h3>
-      </div>
-      <div className="mt-8 w-full max-w-lg">
+      </header>
+      <section className="mt-8 w-full max-w-md">
         <ContactForm />
-      </div>
-    </section>
+      </section>
+    </article>
   );
 }

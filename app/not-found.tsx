@@ -1,24 +1,26 @@
 import Link from "next/link";
-import { noto_sans } from "./fonts";
 import Button from "./components/Button";
+import { arimo, nunito } from "./fonts";
 
 export default function NotFoundPage() {
   return (
-    <main className="flex flex-col items-center justify-center min-h-[calc(100vh-160px)] px-6 text-center bg-neutral-950">
-      <h3 className="text-4xl font-semibold bg-gradient-to-r from-cyan-500 to-teal-400 inline-block text-transparent bg-clip-text sm:text-6xl">
-        404
-      </h3>
+    <article className="px-6 mt-12 py-12 flex flex-col items-center">
       <h2
-        className={`${noto_sans.className} mt-2 text-4xl bg-gradient-to-r from-neutral-300 to-neutral-400 inline-block text-transparent bg-clip-text sm:text-5xl/normal`}
+        className={`${nunito.className} text-base leading-normal tracking-normal text-teal-400 sm:text-lg`}
       >
-        Page Not Found
+        404
       </h2>
-      <p className="mt-4 text-neutral-400">
+      <h3
+        className={`${arimo.className} mt-2 leading-normal tracking-normal text-4xl font-bold sm:text-5xl`}
+      >
+        Page not found
+      </h3>
+      <p className={`${nunito.className} mt-8 text-base leading-normal tracking-normal text-neutral-400`}>
         Sorry, the page you&apos;re looking for doesn&apos;t exist.
       </p>
-      <Link href="/" className="mt-12 px-6">
-        <Button text="Back to home" variant="animated" />
+      <Link href="/" className="mt-16 px-6">
+        <Button text="Back to portfolio" variant="animated" />
       </Link>
-    </main>
+    </article>
   );
 }

@@ -2,10 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import {
-  type Container,
-  type ISourceOptions,
-} from "@tsparticles/engine";
+import { type Container, type ISourceOptions } from "@tsparticles/engine";
 // import { loadAll } from "@tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
 // import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
@@ -20,8 +17,8 @@ const ParticlesEffect = () => {
       // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
       // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
       // starting from v2 you can add only the features you need reducing the bundle size
-      //await loadAll(engine);
-      //await loadFull(engine);
+      // await loadAll(engine);
+      // await loadFull(engine);
       await loadSlim(engine);
       //await loadBasic(engine);
     }).then(() => {
@@ -34,17 +31,11 @@ const ParticlesEffect = () => {
   };
 
   const options: ISourceOptions = useMemo(
-    // fullScreen: { enable: false },
-    // style: {
-    //   position: "absolute",
-    //   width: "100%",
-    //   height: "100%",
-    // },
     () => ({
       autoPlay: true,
       background: {
         color: {
-          value: "transparent",
+          value: "#0a0a0a",
         },
         image: "",
         position: "",
@@ -76,8 +67,8 @@ const ParticlesEffect = () => {
         detectsOn: "window",
         events: {
           onClick: {
-            enable: false,
-            mode: [],
+            enable: true,
+            mode: "push",
           },
           onDiv: {
             selectors: [],
@@ -86,8 +77,8 @@ const ParticlesEffect = () => {
             type: "circle",
           },
           onHover: {
-            enable: false,
-            mode: [],
+            enable: true,
+            mode: "repulse",
             parallax: {
               enable: false,
               force: 2,
@@ -120,6 +111,12 @@ const ParticlesEffect = () => {
             distance: 200,
             duration: 0.4,
             mix: false,
+            divs: {
+              distance: 200,
+              duration: 0.4,
+              mix: false,
+              selectors: [],
+            },
           },
           connect: {
             distance: 80,
@@ -145,12 +142,21 @@ const ParticlesEffect = () => {
             quantity: 2,
           },
           repulse: {
-            distance: 200,
+            distance: 400,
             duration: 0.4,
             factor: 100,
             speed: 1,
             maxSpeed: 50,
             easing: "ease-out-quad",
+            divs: {
+              distance: 200,
+              duration: 0.4,
+              factor: 100,
+              speed: 1,
+              maxSpeed: 50,
+              easing: "ease-out-quad",
+              selectors: [],
+            },
           },
           slow: {
             factor: 3,
@@ -213,36 +219,7 @@ const ParticlesEffect = () => {
           },
         },
         color: {
-          value: "#fff",
-          animation: {
-            h: {
-              count: 0,
-              enable: false,
-              speed: 1,
-              decay: 0,
-              delay: 0,
-              sync: true,
-              offset: 0,
-            },
-            s: {
-              count: 0,
-              enable: false,
-              speed: 1,
-              decay: 0,
-              delay: 0,
-              sync: true,
-              offset: 0,
-            },
-            l: {
-              count: 0,
-              enable: false,
-              speed: 1,
-              decay: 0,
-              delay: 0,
-              sync: true,
-              offset: 0,
-            },
-          },
+          value: "#2dd4bf",
         },
         effect: {
           close: true,
@@ -272,7 +249,7 @@ const ParticlesEffect = () => {
           },
           decay: 0,
           distance: {},
-          direction: "bottom",
+          direction: "none",
           drift: 0,
           enable: true,
           gravity: {
@@ -298,12 +275,12 @@ const ParticlesEffect = () => {
           },
           random: false,
           size: false,
-          speed: 2,
+          speed: 6,
           spin: {
             acceleration: 0,
             enable: false,
           },
-          straight: true,
+          straight: false,
           trail: {
             enable: false,
             length: 10,
@@ -322,10 +299,10 @@ const ParticlesEffect = () => {
             mode: "delete",
             value: 0,
           },
-          value: 400,
+          value: 80,
         },
         opacity: {
-          value: 1,
+          value: 0.5,
           animation: {
             count: 0,
             enable: false,
@@ -357,7 +334,10 @@ const ParticlesEffect = () => {
           type: "circle",
         },
         size: {
-          value: 10,
+          value: {
+            min: 1,
+            max: 3,
+          },
           animation: {
             count: 0,
             enable: false,
@@ -374,13 +354,10 @@ const ParticlesEffect = () => {
           width: 0,
         },
         zIndex: {
-          value: {
-            min: 0,
-            max: 100,
-          },
-          opacityRate: 10,
-          sizeRate: 10,
-          velocityRate: 10,
+          value: 0,
+          opacityRate: 1,
+          sizeRate: 1,
+          velocityRate: 1,
         },
         destroy: {
           bounds: {},
@@ -437,10 +414,10 @@ const ParticlesEffect = () => {
           },
         },
         wobble: {
-          distance: 10,
-          enable: true,
+          distance: 5,
+          enable: false,
           speed: {
-            angle: 10,
+            angle: 50,
             move: 10,
           },
         },
@@ -485,13 +462,13 @@ const ParticlesEffect = () => {
         links: {
           blink: false,
           color: {
-            value: "#fff",
+            value: "#737373",
           },
           consent: false,
-          distance: 100,
-          enable: false,
+          distance: 150,
+          enable: true,
           frequency: 1,
-          opacity: 1,
+          opacity: 0.4,
           shadow: {
             blur: 5,
             color: {
@@ -519,15 +496,11 @@ const ParticlesEffect = () => {
       pauseOnOutsideViewport: true,
       responsive: [],
       smooth: false,
-      style: {
-        // position: "absolute",
-        // width: "100%",
-        // height: "100%",
-      },
+      style: {},
       themes: [],
       zLayers: 100,
-      key: "snow",
-      name: "Snow",
+      key: "basic",
+      name: "Basic",
       motion: {
         disable: false,
         reduce: {
