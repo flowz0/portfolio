@@ -51,7 +51,7 @@ const projectsData: ProjectData[] = [
   {
     id: 4,
     img: ProjectImgDDDC,
-    title: "Duct Daddy Duct Cleaning",
+    title: "Marketing Website",
     desc: "The project included custom designs created in Figma and implemented with Next.js, Tailwind CSS, and Vercel for seamless deployment. The site featured a mobile-friendly layout, sections highlighting services, customer reviews, and a contact form integrated with SendGrid Email API to enable direct client communication. Optimized for speed, SEO, accessibility, and security, the website helped increase quote requests directly from the site.",
     challenges: "Translating client requirements into a visually appealing and functional design that aligned with their branding and messaging. Navigating the complexities of SEO optimization to ensure the site ranked well on search engines. Ensuring cross-browser and cross-device compatibility to deliver a consistent user experience.",
     lessons: "How to implement the SendGrid Email API for seamless client communication, enhancing the site’s functionality and user engagement. Advanced SEO techniques to improve search rankings, including meta tag optimization, keyword research, and structured data implementation. Best practices for accessibility and performance, using tools like Lighthouse to identify and address areas for improvement.",
