@@ -2,7 +2,7 @@ import Link from "next/link";
 import Project from "./Project";
 
 import projectsData from "../data/projectsData";
-import { noto_sans, poppins } from "../fonts";
+import { arimo, nunito } from "../fonts";
 
 export default function Projects() {
   // Sort projects by date (most recent first)
@@ -16,14 +16,20 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="px-6 py-12 rounded-lg flex flex-col items-center sm:py-16"
+      className="px-6 py-12 rounded-lg flex flex-col items-center sm:py-24"
     >
-      <h2 className={`${noto_sans.className} text-sm font-light bg-gradient-to-r from-cyan-500 to-teal-400 inline-block text-transparent bg-clip-text`}>
-        Projects
-      </h2>
-      <h3 className={`${poppins.className} mt-4 text-4xl font-semibold bg-gradient-to-r from-neutral-300 to-neutral-400 inline-block text-transparent bg-clip-text sm:text-5xl`}>
-        My Work
-      </h3>
+      <header className="flex flex-col items-center">
+        <h2
+          className={`${nunito.className} text-base leading-normal tracking-normal text-teal-400 sm:text-lg`}
+        >
+          <small>Projects</small>
+        </h2>
+        <h3
+          className={`${arimo.className} mt-2 leading-normal tracking-normal text-4xl font-bold sm:text-5xl`}
+        >
+          My Work
+        </h3>
+      </header>
       <div className="mt-8 flex flex-wrap justify-center gap-6 sm:mx-4">
         {recentProjects.map((project) => (
           <Project key={project.id} {...project} />
@@ -31,7 +37,7 @@ export default function Projects() {
       </div>
       <Link
         href="/projects"
-        className="mt-6 transition ease-in-out delay-75 duration-300 text-neutral-500 hover:text-teal-500 hover:scale-105 hover:-translate-y-1 active:scale-95"
+        className={`${arimo.className} mt-6 text-neutral-500 transition ease-in-out delay-75 duration-300 hover:text-teal-400 hover:scale-105 active:scale-95`}
       >
         Show All Projects
       </Link>
