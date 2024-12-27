@@ -1,36 +1,38 @@
-import ContactSocials from "./ContactSocials";
-import RoleTypeWriter from "./RoleTypeWriter";
-import { noto_sans, poppins } from "../fonts";
+import { arimo, nunito } from "@/app/fonts";
 import Link from "next/link";
+import Button from "./Button";
+
+// Components
+import RoleTypeWriter from "./RoleTypeWriter";
+import ContactSocials from "./ContactSocials";
 
 export default function Hero() {
   return (
-    <main
+    <article
       id="about"
-      className="z-10 inset-0 x-6 pt-36 pb-24 sm:pt-56 sm:pb-44 flex flex-col justify-center items-center"
+      className={`${arimo.className} px-6 mt-12 py-12 flex justify-center sm:py-24`}
     >
-      <h1
-        className={`${poppins.className} text-4xl font-semibold bg-gradient-to-r from-neutral-300 to-neutral-400 inline-block text-transparent bg-clip-text sm:text-6xl`}
-      >
-        Billy Flowers
-      </h1>
-      <p
-        className={`${noto_sans.className} mt-2 text-base font-light tracking-wide bg-gradient-to-r from-neutral-300 to-neutral-400 inline-block text-transparent bg-clip-text sm:text-lg`}
-      >
-        I&apos;m a {" "}
-        <span className="bg-gradient-to-r from-cyan-500 to-teal-400 inline-block text-transparent bg-clip-text">
-          <RoleTypeWriter />
-        </span>
-      </p>
-      <ContactSocials className="mt-4" />
-      <Link href={`/resume/billys-resume.pdf`} target="_blank">
-        <button
-          type="button"
-          className={`${noto_sans.className} mt-4 py-2 px-3.5 rounded-lg transition ease-in-out delay-75 duration-300 bg-gradient-to-r from-neutral-700 to-neutral-800 inline-block text-neutral-400 hover:scale-105 hover:-translate-y-1 active:scale-95`}
+      <header className="max-w-2xl flex flex-col items-center">
+        <h1 className="text-4xl leading-normal tracking-normal font-bold sm:text-6xl">
+          Billy Flowers
+        </h1>
+        <p
+          className={`${nunito.className} mt-2 text-base leading-normal tracking-normal text-neutral-200 sm:text-lg sm:mt-4`}
         >
-          View CV
-        </button>
-      </Link>
-    </main>
+          I&apos;m a{" "}
+          <span className="text-teal-400">
+            <RoleTypeWriter />
+          </span>
+        </p>
+        <ContactSocials className="mt-4" />
+        <Link
+          href={`/resume/billys-resume.pdf`}
+          target="_blank"
+          className="mt-6 text-lg w-fit"
+        >
+          <Button text="View CV" variant="animated" className="w-fit" />
+        </Link>
+      </header>
+    </article>
   );
 }
