@@ -3,7 +3,7 @@ import ContactForm from "./ContactForm";
 
 export default function Contact() {
   return (
-    <article className="px-6 py-12 flex flex-col items-center sm:py-24">
+    <article className="px-6 py-12 flex flex-col items-center bg-neutral-950 sm:py-24">
       <header className="w-full flex flex-col items-center">
         <h2 className={`${nunito.className} text-base leading-normal tracking-normal text-teal-400 sm:text-lg`}>
           <small>Contact</small>

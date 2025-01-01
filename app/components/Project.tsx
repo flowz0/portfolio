@@ -42,17 +42,21 @@ export default function Project({
       />
       <header className="p-2 flex flex-col bg-neutral-950 sm:mt-0 sm:pb-4 sm:px-5 sm:bg-transparent">
         <section>
-          <h4
-            className={`${arimo.className} text-3xl leading-normal tracking-normal text-neutral-300`}
-          >
-            {title}
-          </h4>
+          <Link href={`/projects/${id}`} passHref>
+            <h4
+              className={`${arimo.className} text-2xl font-semibold leading-normal tracking-normal text-neutral-300 sm:text-3xl`}
+            >
+              {title}
+            </h4>
+          </Link>
           <p
-            className={`${nunito.className} text-base leading-normal tracking-normal line-clamp-3 text-neutral-400`}
+            className={`${nunito.className} mt-1 text-base leading-normal tracking-normal line-clamp-3 text-neutral-400`}
           >
             {desc}
           </p>
-          <p className={`${arimo.className} mt-2 text-base leading-normal tracking-normal text-neutral-400`}>
+          <p
+            className={`${arimo.className} mt-2 text-base leading-normal tracking-normal text-neutral-400`}
+          >
             <small className="flex items-center">
               <FaCalendarAlt className="mr-2" />
               {formatDate(date)}
@@ -60,7 +64,7 @@ export default function Project({
           </p>
         </section>
         <section className="mt-5 flex justify-between items-center">
-          <Link href={`/projects/${id}`}>
+          <Link href={`/projects/${id}`} passHref>
             <Button text="View Project" variant="outlined" />
           </Link>
           <div className="flex gap-x-4">

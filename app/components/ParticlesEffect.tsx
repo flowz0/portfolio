@@ -142,7 +142,7 @@ const ParticlesEffect = () => {
             quantity: 2,
           },
           repulse: {
-            distance: 400,
+            distance: 300,
             duration: 0.4,
             factor: 100,
             speed: 1,
@@ -299,7 +299,7 @@ const ParticlesEffect = () => {
             mode: "delete",
             value: 0,
           },
-          value: 80,
+          value: 30,
         },
         opacity: {
           value: 0.5,
