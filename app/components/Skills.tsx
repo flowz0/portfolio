@@ -13,7 +13,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="py-12 rounded-lg flex flex-col items-center sm:py-24"
+      className="py-12 rounded-lg flex flex-col items-center bg-neutral-950 sm:py-24"
     >
       <h2
         className={`${nunito.className} text-base leading-normal tracking-normal text-teal-400 sm:text-lg`}

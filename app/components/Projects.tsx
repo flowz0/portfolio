@@ -16,7 +16,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="px-6 py-12 rounded-lg flex flex-col items-center sm:py-24"
+      className="px-6 py-12 rounded-lg flex flex-col items-center bg-neutral-950 sm:py-24"
     >
       <header className="flex flex-col items-center">
         <h2
