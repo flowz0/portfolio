@@ -41,10 +41,10 @@ export default async function ProjectDetails({
           <h2
             className={`${nunito.className} text-base leading-normal tracking-normal text-teal-400 sm:text-lg`}
           >
-            Detail
+            <small>Details</small>
           </h2>
           <h3
-            className={`${arimo.className} mt-2 leading-normal tracking-normal text-4xl font-bold text-neutral-200 sm:text-6xl`}
+            className={`${arimo.className} mt-2 leading-normal tracking-normal text-4xl font-bold sm:text-5xl`}
           >
             Project 00{project.id}
           </h3>
@@ -74,7 +74,7 @@ export default async function ProjectDetails({
           priority={true}
         />
         <h4
-          className={`${arimo.className} mt-6 leading-normal tracking-normal text-3xl font-bold text-neutral-300 sm:text-5xl`}
+          className={`${arimo.className} mt-4 leading-normal tracking-normal text-3xl font-semibold text-neutral-300 sm:text-4xl`}
         >
           {project.title}
         </h4>
@@ -87,7 +87,7 @@ export default async function ProjectDetails({
           {project.lessons && (
             <li>
               <h5
-                className={`${arimo.className} leading-normal tracking-normal text-2xl font-bold text-neutral-300 sm:text-4xl`}
+                className={`${arimo.className} leading-normal tracking-normal text-2xl font-medium text-neutral-300 sm:text-3xl`}
               >
                 What I Learned
               </h5>
@@ -101,7 +101,7 @@ export default async function ProjectDetails({
           {project.challenges && (
             <li>
               <h5
-                className={`${arimo.className} leading-normal tracking-normal text-2xl font-bold text-neutral-300 sm:text-4xl`}
+                className={`${arimo.className} leading-normal tracking-normal text-2xl font-medium text-neutral-300 sm:text-3xl`}
               >
                 Challenges I Faced
               </h5>
