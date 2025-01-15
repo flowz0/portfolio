@@ -12,7 +12,7 @@ import {
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { arimo } from "@/app/fonts";
 
 const navLinks = [
@@ -22,24 +22,11 @@ const navLinks = [
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
 
   const defaultNavbarStyle =
-    "fixed z-50 text-neutral-300 transition-colors duration-300";
-  const scrolledNavbarStyle = "bg-neutral-950";
-
-  useEffect(() => {
-    setIsMenuOpen(false);
-
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [pathname]);
+    "fixed z-50 bg-neutral-950 text-neutral-300 transition-colors duration-300";
 
   const handleLinkClick = (href: string) => {
     setIsMenuOpen(false);
@@ -50,9 +37,7 @@ export default function Navigation() {
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
       isMenuOpen={isMenuOpen}
-      className={`${defaultNavbarStyle} ${
-        isScrolled ? scrolledNavbarStyle : "bg-transparent"
-      } ${isMenuOpen ? "bg-neutral-950" : "rounded-b-lg"}`}
+      className={`${defaultNavbarStyle} ${isMenuOpen ? "bg-neutral-950" : "rounded-b-lg"}`}
       isBlurred={false}
     >
       <NavbarContent>

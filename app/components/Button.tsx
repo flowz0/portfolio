@@ -14,14 +14,14 @@ export default function Button({ text, className, submit = false, variant = 'pri
     const variantClasses = {
         primary: "bg-gradient-to-r from-neutral-700 to-neutral-800 inline-block text-neutral-400",
         secondary: "bg-neutral-300 text-neutral-700 hover:bg-neutral-400",
-        outlined: "border-0 ring-2 ring-neutral-700 text-neutral-500 hover:bg-neutral-700 hover:text-neutral-300 active:scale-95",
+        outlined: "border-0 ring-2 ring-teal-500 text-teal-500 hover:bg-teal-500 hover:text-neutral-950 active:scale-95",
         animated: "bg-teal-400 text-neutral-950 animate-background-pulse hover:scale-105 active:scale-95",
     }
 
     return (
         <button
             type={submit ? 'submit' : 'button'}
-            className={`${baseClass} ${variantClasses[variant]} ${arimo.className} ${className} font-bold leading-normal tracking-normal transition ease-in-out delay-75 duration-200`}
+            className={`${baseClass} ${variantClasses[variant]} ${arimo.className} ${className} font-bold leading-normal tracking-normal transition delay-75`}
         >
             {text}
         </button>

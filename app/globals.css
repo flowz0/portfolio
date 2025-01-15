@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .animation-pause {
+    animation-play-state: paused;
+  }
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -9,16 +15,16 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background-color: #0a0a0a;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #262626;
+  background-color: #115e59;
   border-radius: 0.5rem;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #171717;
+  background-color: #0d9488;
 }

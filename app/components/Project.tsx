@@ -20,7 +20,7 @@ export default function Project({
   code,
 }: ProjectProps & { id: number }) {
   const iconClass =
-    "text-2xl text-neutral-500 transition ease-in-out delay-75 duration-300 hover:text-teal-500 hover:scale-105 active:scale-95";
+    "text-3xl text-neutral-500 transition ease-in-out delay-75 duration-300 hover:text-teal-500 hover:scale-105 active:scale-95";
 
   // Function to form date
   const formatDate = (dateString: string) => {

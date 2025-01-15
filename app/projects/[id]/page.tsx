@@ -20,7 +20,7 @@ export default async function ProjectDetails({
   const projectId = parseInt(id);
   const project = projectsData.find((p) => p.id === projectId);
   const iconClass =
-    "text-2xl text-neutral-500 transition ease-in-out delay-75 duration-300 hover:text-teal-500 hover:scale-105 active:scale-95";
+    "text-2xl text-neutral-500 transition ease-in-out delay-75 duration-300 sm:text-3xl hover:text-teal-500 hover:scale-105 active:scale-95";
 
   if (!project) {
     notFound();
@@ -38,19 +38,17 @@ export default async function ProjectDetails({
     <article className="mx-6 mt-12 py-12 flex flex-col items-center">
       <section className="max-w-3xl">
         <header className="flex flex-col items-center">
-          <h2
-            className={`${nunito.className} text-base leading-normal tracking-normal text-teal-400 sm:text-lg`}
-          >
-            <small>Details</small>
-          </h2>
           <h3
-            className={`${arimo.className} mt-2 leading-normal tracking-normal text-4xl font-bold sm:text-5xl`}
+            className={`${arimo.className} mt-2 tracking-normal text-4xl/normal font-bold sm:text-5xl/normal`}
           >
-            Project 00{project.id}
+            Project{" "}
+            <span className="bg-gradient-to-r from-teal-400 to-cyan-600 inline-block text-transparent bg-clip-text">
+              Details
+            </span>
           </h3>
         </header>
         <section className="mt-8 flex justify-between items-baseline text-neutral-400">
-          <p className="flex items-center">
+          <p className="flex items-center text-lg/normal">
             <FaCalendarAlt className="mr-2" />
             {formatDate(project.date)}
           </p>
@@ -74,12 +72,12 @@ export default async function ProjectDetails({
           priority={true}
         />
         <h4
-          className={`${arimo.className} mt-4 leading-normal tracking-normal text-3xl font-semibold text-neutral-300 sm:text-4xl`}
+          className={`${arimo.className} mt-4 tracking-normal text-3xl/normal font-semibold text-neutral-300 sm:text-4xl/normal`}
         >
           {project.title}
         </h4>
         <p
-          className={`${nunito.className} mt-4 text-base leading-normal tracking-normal text-neutral-400`}
+          className={`${nunito.className} mt-4 text-base/normal tracking-normal text-neutral-400`}
         >
           {project.desc}
         </p>
@@ -87,12 +85,12 @@ export default async function ProjectDetails({
           {project.lessons && (
             <li>
               <h5
-                className={`${arimo.className} leading-normal tracking-normal text-2xl font-medium text-neutral-300 sm:text-3xl`}
+                className={`${arimo.className} tracking-normal text-2xl/normal font-medium text-neutral-300 sm:text-3xl/normal`}
               >
                 What I Learned
               </h5>
               <p
-                className={`${nunito.className} mt-4 text-base leading-normal tracking-normal text-neutral-400`}
+                className={`${nunito.className} mt-4 text-base/normal tracking-normal text-neutral-400`}
               >
                 {project.lessons}
               </p>
@@ -101,12 +99,12 @@ export default async function ProjectDetails({
           {project.challenges && (
             <li>
               <h5
-                className={`${arimo.className} leading-normal tracking-normal text-2xl font-medium text-neutral-300 sm:text-3xl`}
+                className={`${arimo.className} tracking-normal text-2xl/normal font-medium text-neutral-300 sm:text-3xl/normal`}
               >
                 Challenges I Faced
               </h5>
               <p
-                className={`${nunito.className} mt-4 text-base leading-normal tracking-normal text-neutral-400`}
+                className={`${nunito.className} mt-4 text-base/normal tracking-normal text-neutral-400`}
               >
                 {project.challenges}
               </p>
