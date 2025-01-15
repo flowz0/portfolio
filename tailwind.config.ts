@@ -17,11 +17,22 @@ const config: Config = {
       },
       animation: {
         "background-pulse": "pulse 2s ease-in-out infinite",
+        "floating-effect": "float 3s ease-in-out infinite",
+        "slide-left": "slide-left 25s linear infinite",
+        "slide-left-fast": "slide-left 20s linear infinite",
       },
       keyframes: {
         pulse: {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0.5" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-3px)" },
+        },
+        "slide-left": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
         },
       },
     },

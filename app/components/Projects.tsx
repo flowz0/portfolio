@@ -2,7 +2,7 @@ import Link from "next/link";
 import Project from "./Project";
 
 import projectsData from "../data/projectsData";
-import { arimo, nunito } from "../fonts";
+import { arimo } from "../fonts";
 
 export default function Projects() {
   // Sort projects by date (most recent first)
@@ -19,15 +19,10 @@ export default function Projects() {
       className="px-6 py-12 rounded-lg flex flex-col items-center bg-neutral-950 sm:py-24"
     >
       <header className="flex flex-col items-center">
-        <h2
-          className={`${nunito.className} text-base leading-normal tracking-normal text-teal-400 sm:text-lg`}
-        >
-          <small>Projects</small>
-        </h2>
         <h3
-          className={`${arimo.className} mt-2 leading-normal tracking-normal text-4xl font-bold sm:text-5xl`}
+          className={`${arimo.className} mt-2 tracking-normal text-4xl/normal font-bold text-center sm:text-left sm:text-5xl/normal`}
         >
-          My Work
+          Projects in the <span className="bg-gradient-to-r from-teal-400 to-cyan-600 inline-block text-transparent bg-clip-text">Spotlight</span>
         </h3>
       </header>
       <div className="mt-8 flex flex-wrap justify-center gap-6 sm:mx-4">
