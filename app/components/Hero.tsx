@@ -29,7 +29,7 @@ export default function Hero() {
             keen eye for both aesthetics and functionality.
           </p>
           <Link
-            href="/resume/billys-resume.pdf"
+            href="/resume/billy-flowers.pdf"
             target="_blank"
             className="mt-8 w-fit"
           >
