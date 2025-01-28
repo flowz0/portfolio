@@ -32,7 +32,7 @@ export default function Projects() {
       </div>
       <Link
         href="/projects"
-        className={`${arimo.className} mt-6 text-neutral-500 transition ease-in-out delay-75 duration-300 hover:text-teal-400 hover:scale-105 active:scale-95`}
+        className={`${arimo.className} mt-6 text-lg text-neutral-500 transition ease-in-out delay-75 duration-300 hover:text-teal-400 hover:scale-105 active:scale-95`}
       >
         Show All Projects
       </Link>
