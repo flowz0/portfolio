@@ -6,44 +6,48 @@ import Developer from "@/public/img/developer.png";
 
 export default function Hero() {
   return (
-    <article className="px-6 mt-12 py-12 flex justify-center sm:py-24">
-      <section className="max-w-5xl flex items-center justify-center flex-col md:flex-row md:gap-x-8">
-        <header className="flex flex-col md:w-3/5">
+    <article className="px-6 mt-16 py-12 sm:mt-12 sm:py-24">
+      <section className="flex-1 max-w-5xl mx-auto grid items-center grid-cols-1 sm:grid-cols-2 gap-8">
+        <header className="flex flex-col">
           <p
-            className={`${nunito.className} text-lg/normal tracking-normal font-semibold bg-gradient-to-r from-teal-400 to-cyan-600 inline-block text-transparent bg-clip-text`}
+            className={`${nunito.className} text-lg font-semibold text-teal-500`}
           >
             Hello, my name is
           </p>
           <h1
-            className={`${arimo.className} text-4xl/normal font-bold tracking-normal sm:text-6xl/normal`}
+            className={`${arimo.className} mt-2 text-6xl font-bold sm:text-7xl`}
           >
             Billy Flowers
           </h1>
           <p
-            className={`${nunito.className} mt-4 text-base/relaxed tracking-normal text-neutral-400 sm:mt-4`}
+            className={`${nunito.className} mt-4 text-base text-neutral-400`}
           >
-            I&apos;m a software engineer specializing in creating accessible and
+            I&apos;m a <strong>software engineer</strong> specializing in creating accessible and
             user-centric digital experiences. Bridging the gap between design
-            and development to craft memorable user interfaces that drive
-            engagement and conversion. Certified in core web technologies with a
-            keen eye for both aesthetics and functionality.
+            and development to craft impactful user interfaces that drive
+            engagement and conversion.
           </p>
-          <Link
-            href="/resume/billy-flowers.pdf"
-            target="_blank"
-            className="mt-8 w-fit"
-          >
-            <Button text="View CV" variant="outlined" className="text-xl" />
-          </Link>
+          <div className="mt-6 flex gap-x-2">
+            <Link href="#contact" passHref>
+              <Button text="Contact me" className="text-lg" />
+            </Link>
+            <Link
+              href="/resume/billy-flowers.pdf"
+              target="_blank"
+              className="w-fit"
+            >
+              <Button text="View CV" variant="outlined" className="text-lg" />
+            </Link>
+          </div>
         </header>
-        <div className="flex justify-center">
-          <Image
-            src={Developer}
-            alt="Developer icon"
-            className="mt-8 w-full h-auto animate-floating-effect md:mt-0"
-            priority
-          />
-        </div>
+        <Image
+          src={Developer}
+          alt="Developer icon"
+          height={512}
+          width={512}
+          className="mt-8 h-auto w-96 animate-floating-effect md:mt-0"
+          priority
+        />
       </section>
     </article>
   );

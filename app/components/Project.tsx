@@ -20,7 +20,7 @@ export default function Project({
   code,
 }: ProjectProps & { id: number }) {
   const iconClass =
-    "text-3xl text-neutral-500 transition ease-in-out delay-75 duration-300 hover:text-teal-500 hover:scale-105 active:scale-95";
+    "text-2xl text-neutral-500 transition ease-in-out delay-75 duration-300 hover:text-teal-500 hover:scale-105 active:scale-95";
 
   // Function to form date
   const formatDate = (dateString: string) => {
@@ -33,14 +33,14 @@ export default function Project({
   };
 
   return (
-    <article className="h-full w-full max-w-sm sm:bg-neutral-900 sm:rounded-lg">
+    <article className="max-w-sm sm:bg-neutral-900 sm:rounded-lg">
       <Image
         src={img}
         alt={`${title} project image`}
-        className="object-cover w-auto h-[16rem] rounded sm:rounded-t-lg sm:rounded-b-none"
+        className="object-cover h-52 sm:h-64 w-full rounded sm:rounded-t-lg sm:rounded-b-none"
         priority={true}
       />
-      <header className="p-2 flex flex-col bg-neutral-950 sm:mt-0 sm:pb-4 sm:px-5 sm:bg-transparent">
+      <header className="py-2 flex flex-col bg-neutral-950 sm:pt-4 sm:pb-6 sm:px-5 sm:bg-transparent">
         <section>
           <Link href={`/projects/${id}`} passHref>
             <h4
@@ -50,7 +50,7 @@ export default function Project({
             </h4>
           </Link>
           <p
-            className={`${nunito.className} mt-1 text-base leading-normal tracking-normal line-clamp-3 text-neutral-400`}
+            className={`${nunito.className} mt-2 text-base leading-normal tracking-normal line-clamp-3 text-neutral-400`}
           >
             {desc}
           </p>
@@ -67,7 +67,7 @@ export default function Project({
           <Link href={`/projects/${id}`} passHref>
             <Button text="View Project" variant="outlined" />
           </Link>
-          <div className="flex gap-x-4">
+          <div className="flex gap-x-3">
             {site && (
               <Link href={site} target="_blank" className={iconClass}>
                 <FaExternalLinkAlt />

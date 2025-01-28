@@ -39,6 +39,7 @@ export default function Navigation() {
       isMenuOpen={isMenuOpen}
       className={`${defaultNavbarStyle} ${isMenuOpen ? "bg-neutral-950" : "rounded-b-lg"}`}
       isBlurred={false}
+      shouldHideOnScroll
     >
       <NavbarContent>
         <NavbarBrand>
@@ -46,7 +47,7 @@ export default function Navigation() {
             href={"/"}
             className={`${arimo.className} text-xl font-bold transition ease-in-out delay-75 duration-200 hover:scale-110 active:scale-90`}
           >
-            flowz0
+            {"<flowz0 />"}
           </Link>
         </NavbarBrand>
         <NavbarMenuToggle

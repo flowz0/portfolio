@@ -110,7 +110,7 @@ function ContactForm() {
         />
       </section>
 
-      <Button className="self-end" text="Contact" variant="animated" submit />
+      <Button className="text-lg self-end" text="Contact" variant="animated" submit />
     </form>
   );
 }
