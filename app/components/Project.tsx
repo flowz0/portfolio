@@ -42,9 +42,9 @@ export default function Project({
       />
       <header className="py-2 flex flex-col bg-neutral-950 sm:pt-4 sm:pb-6 sm:px-5 sm:bg-transparent">
         <section>
-          <Link href={`/projects/${id}`} passHref>
+          <Link href={`/projects/${id}`} className="w-full" passHref>
             <h4
-              className={`${arimo.className} text-2xl font-semibold leading-normal tracking-normal text-neutral-300 sm:text-3xl`}
+              className={`${arimo.className} text-2xl font-semibold leading-normal tracking-normal text-neutral-300 hover:underline sm:text-3xl`}
             >
               {title}
             </h4>
