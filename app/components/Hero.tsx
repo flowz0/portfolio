@@ -7,7 +7,7 @@ import Developer from "@/public/img/developer.png";
 export default function Hero() {
   return (
     <article className="px-6 mt-16 py-12 sm:mt-12 sm:py-24">
-      <section className="flex-1 max-w-5xl mx-auto grid items-center grid-cols-1 sm:grid-cols-2 gap-8">
+      <section className="flex-1 max-w-5xl mx-auto grid items-center grid-cols-1 sm:grid-cols-2 gap-x-12">
         <header className="flex flex-col">
           <p
             className={`${nunito.className} text-lg font-semibold text-teal-500`}
@@ -35,19 +35,22 @@ export default function Hero() {
               href="/resume/billy-flowers.pdf"
               target="_blank"
               className="w-fit"
+              passHref
             >
               <Button text="View CV" variant="outlined" className="text-lg" />
             </Link>
           </div>
         </header>
-        <Image
-          src={Developer}
-          alt="Developer icon"
-          height={512}
-          width={512}
-          className="mt-8 h-auto w-96 animate-floating-effect md:mt-0"
-          priority
-        />
+        <div className="flex justify-center">
+          <Image
+            src={Developer}
+            alt="Developer icon"
+            height={512}
+            width={512}
+            className="mt-8 h-auto w-96 animate-floating-effect md:mt-0"
+            priority
+          />
+        </div>
       </section>
     </article>
   );

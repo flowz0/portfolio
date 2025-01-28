@@ -72,7 +72,7 @@ export default async function ProjectDetails({
           priority={true}
         />
         <h4
-          className={`${arimo.className} mt-4 tracking-normal text-3xl/normal font-semibold text-neutral-300 sm:text-4xl/normal`}
+          className={`${arimo.className} mt-2 tracking-normal text-3xl/normal font-semibold text-neutral-300 sm:text-4xl/normal`}
         >
           {project.title}
         </h4>

@@ -37,7 +37,7 @@ export default function Project({
       <Image
         src={img}
         alt={`${title} project image`}
-        className="object-cover h-52 sm:h-64 w-full rounded sm:rounded-t-lg sm:rounded-b-none"
+        className="object-cover h-48 sm:h-60 w-full rounded sm:rounded-t-lg sm:rounded-b-none"
         priority={true}
       />
       <header className="py-2 flex flex-col bg-neutral-950 sm:pt-4 sm:pb-6 sm:px-5 sm:bg-transparent">
