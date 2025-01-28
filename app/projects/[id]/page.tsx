@@ -20,7 +20,7 @@ export default async function ProjectDetails({
   const projectId = parseInt(id);
   const project = projectsData.find((p) => p.id === projectId);
   const iconClass =
-    "text-2xl text-neutral-500 transition ease-in-out delay-75 duration-300 sm:text-3xl hover:text-teal-500 hover:scale-105 active:scale-95";
+    "text-2xl text-neutral-500 transition ease-in-out delay-75 duration-300 hover:text-teal-500 hover:scale-105 active:scale-95";
 
   if (!project) {
     notFound();
@@ -35,24 +35,24 @@ export default async function ProjectDetails({
   };
 
   return (
-    <article className="mx-6 mt-12 py-12 flex flex-col items-center">
+    <article className="mx-6 mt-16 py-12 flex flex-col items-center">
       <section className="max-w-3xl">
         <header className="flex flex-col items-center">
           <h3
             className={`${arimo.className} mt-2 tracking-normal text-4xl/normal font-bold sm:text-5xl/normal`}
           >
             Project{" "}
-            <span className="bg-gradient-to-r from-teal-400 to-cyan-600 inline-block text-transparent bg-clip-text">
+            <span className="text-teal-500">
               Details
             </span>
           </h3>
         </header>
         <section className="mt-8 flex justify-between items-baseline text-neutral-400">
-          <p className="flex items-center text-lg/normal">
+          <p className="flex items-center">
             <FaCalendarAlt className="mr-2" />
             {formatDate(project.date)}
           </p>
-          <section className="flex gap-4">
+          <section className="flex gap-x-3">
             {project.site && (
               <Link href={project.site} target="_blank" className={iconClass}>
                 <FaExternalLinkAlt />
@@ -77,11 +77,11 @@ export default async function ProjectDetails({
           {project.title}
         </h4>
         <p
-          className={`${nunito.className} mt-4 text-base/normal tracking-normal text-neutral-400`}
+          className={`${nunito.className} mt-2 text-base/normal tracking-normal text-neutral-400`}
         >
           {project.desc}
         </p>
-        <ul className="mt-12 flex flex-col gap-y-8">
+        <ul className="mt-8 flex flex-col gap-y-8">
           {project.lessons && (
             <li>
               <h5
@@ -90,7 +90,7 @@ export default async function ProjectDetails({
                 What I Learned
               </h5>
               <p
-                className={`${nunito.className} mt-4 text-base/normal tracking-normal text-neutral-400`}
+                className={`${nunito.className} mt-2 text-base/normal tracking-normal text-neutral-400`}
               >
                 {project.lessons}
               </p>
@@ -104,7 +104,7 @@ export default async function ProjectDetails({
                 Challenges I Faced
               </h5>
               <p
-                className={`${nunito.className} mt-4 text-base/normal tracking-normal text-neutral-400`}
+                className={`${nunito.className} mt-2 text-base/normal tracking-normal text-neutral-400`}
               >
                 {project.challenges}
               </p>
