@@ -10,7 +10,7 @@ export default function page() {
           className={`${arimo.className} mt-2 tracking-normal text-4xl/normal font-bold sm:text-5xl/normal`}
         >
           All My{" "}
-          <span className="bg-gradient-to-r from-teal-400 to-cyan-600 inline-block text-transparent bg-clip-text">
+          <span className="text-teal-500">
             Projects
           </span>
         </h3>

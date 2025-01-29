@@ -6,8 +6,8 @@ import Developer from "@/public/img/developer.png";
 
 export default function Hero() {
   return (
-    <article className="px-6 mt-16 py-12 sm:mt-12 sm:py-24">
-      <section className="flex-1 max-w-5xl mx-auto grid items-center grid-cols-1 sm:grid-cols-2 gap-x-12">
+    <article className="px-6 mt-16 py-12 sm:py-24">
+      <section className="max-w-6xl mx-auto grid items-center grid-cols-1 md:grid-cols-2 gap-x-2">
         <header className="flex flex-col">
           <p
             className={`${nunito.className} text-lg font-semibold text-teal-500`}
@@ -27,7 +27,7 @@ export default function Hero() {
             and development to craft impactful user interfaces that drive
             engagement and conversion.
           </p>
-          <div className="mt-6 flex gap-x-2">
+          <div className="mt-8 flex gap-x-4">
             <Link href="#contact" passHref>
               <Button text="Contact me" className="text-lg" />
             </Link>
@@ -41,7 +41,7 @@ export default function Hero() {
             </Link>
           </div>
         </header>
-        <div className="flex justify-center">
+        <div className="flex justify-center md:justify-end">
           <Image
             src={Developer}
             alt="Developer icon"

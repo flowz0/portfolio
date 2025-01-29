@@ -19,7 +19,7 @@ const config: Config = {
         "background-pulse": "pulse 2s ease-in-out infinite",
         "floating-effect": "float 3s ease-in-out infinite",
         "slide-left": "slide-left 25s linear infinite",
-        "slide-left-fast": "slide-left 20s linear infinite",
+        "slide-left-fast": "slide-left 15s linear infinite",
       },
       keyframes: {
         pulse: {

@@ -16,11 +16,11 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="px-6 py-12 rounded-lg flex flex-col items-center bg-neutral-950 sm:py-16"
+      className="max-w-7xl mx-auto px-6 py-12 flex flex-col items-center bg-neutral-950 sm:py-16"
     >
       <header className="flex flex-col items-center">
         <h3
-          className={`${arimo.className} mt-2 tracking-normal text-4xl/normal font-bold text-center sm:text-left sm:text-5xl/normal`}
+          className={`${arimo.className} tracking-normal text-4xl/normal font-bold text-center sm:text-left sm:text-5xl/normal`}
         >
           Projects in the <span className="text-teal-500">Spotlight</span>
         </h3>
