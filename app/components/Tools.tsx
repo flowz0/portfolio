@@ -24,11 +24,11 @@ export default function Tools() {
   ];
 
   return (
-    <section id="skills" className="py-12 bg-neutral-950 overflow-hidden sm:py-16">
-      <div className="max-w-4xl mx-auto px-4">
+    <section id="skills" className="px-6 py-12 bg-neutral-950 overflow-hidden sm:py-28">
+      <div className="max-w-6xl mx-auto px-4">
         <header className="flex flex-col items-center">
           <h3
-            className={`${arimo.className} mt-2 tracking-normal text-4xl/normal font-bold text-center sm:text-left sm:text-5xl/normal`}
+            className={`${arimo.className} tracking-normal text-4xl font-bold text-center sm:text-5xl`}
           >
             <span className="text-teal-500">
               Tools

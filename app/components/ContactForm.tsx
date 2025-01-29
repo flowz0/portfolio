@@ -65,9 +65,9 @@ function ContactForm() {
         e.preventDefault();
         handleSubmit();
       }}
-      className={`${arimo.className} w-full flex flex-col gap-y-4`}
+      className={`${arimo.className} w-full grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-4`}
     >
-      <section className="flex flex-col">
+      <section className="flex flex-col col-span-2 sm:col-span-1">
         <label htmlFor="name" className="w-fit text-neutral-400">
           Name
         </label>
@@ -81,7 +81,7 @@ function ContactForm() {
           autoComplete="given-name"
         />
       </section>
-      <section className="flex flex-col">
+      <section className="flex flex-col col-span-2 sm:col-span-1">
         <label htmlFor="email" className="w-fit text-neutral-400">
           Email
         </label>
@@ -95,14 +95,14 @@ function ContactForm() {
           autoComplete="email"
         />
       </section>
-      <section className="flex flex-col">
+      <section className="col-span-2 flex flex-col">
         <label htmlFor="message" className="w-fit text-neutral-400">
           Message
         </label>
         <textarea
           name="message"
           id="message"
-          rows={4}
+          rows={5}
           disabled={isPending}
           className="mt-2 px-3.5 py-2.5 resize-none ring-2 rounded-lg bg-neutral-900 text-neutral-400 ring-neutral-800 placeholder:text-neutral-700 focus:outline-none focus:ring-neutral-600 hover:ring-neutral-700"
           placeholder="Enter message"
@@ -110,7 +110,9 @@ function ContactForm() {
         />
       </section>
 
-      <Button className="text-lg self-end" text="Contact" variant="animated" submit />
+      <div className="col-span-2 flex justify-end">
+        <Button className="mt-2 text-lg" text="Contact" variant="animated" submit />
+      </div>
     </form>
   );
 }
