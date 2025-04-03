@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Button from "./components/Button";
+// import Button from "./components/Button";
 import { arimo, nunito } from "./fonts";
 
 export default function NotFoundPage() {
@@ -19,7 +19,7 @@ export default function NotFoundPage() {
         Sorry, the page you&apos;re looking for doesn&apos;t exist.
       </p>
       <Link href="/" className="mt-16 px-6">
-        <Button text="Back to portfolio" variant="animated" />
+        {/* <Button text="Back to portfolio" variant="animated" /> */}
       </Link>
     </article>
   );
