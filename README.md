@@ -1,2 +1,2 @@
-# Billy Flowers Portfolio
-Created with Next.js, Tailwind CSS, TypeScript, and SendGrid Email API
+# Portfolio (WIP)
+I decided to rewrite and redesign my portfolio.
